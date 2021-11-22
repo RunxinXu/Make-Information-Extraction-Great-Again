@@ -45,6 +45,10 @@ An (incomplete) overview of information extraction
   - [Span-Level Model for Relation Extraction](https://aclanthology.org/P19-1525/)(ACL2019): 用span其实是为了解决nested NER
   - [Span-based Joint Entity and Relation Extraction with Transformer Pre-training](https://arxiv.org/abs/1909.07755)(ECAI2020)
 - Pre-trained Model
+  - [Matching the Blanks: Distributional Similarity for Relation Learning](https://aclanthology.org/P19-1279/)(ACL2019): 假设两个句子含有相同实体则表达同样关系
+  - [Learning from Context or Names?An Empirical Study on Neural Relation Extraction](https://aclanthology.org/2020.emnlp-main.298/)(EMNLP2020): 基于对比学习，两个句子如果远程标注下关系一样那么表示应该尽量接近，否则疏远
+  - [Coreferential Reasoning Learning for Language Representation](https://aclanthology.org/2020.emnlp-main.582/)(EMNLP2020): mask掉实体要求模型能够找到句子中与其共指同一个实体的词
+  - [Pre-training Entity Relation Encoder with Intra-span and Inter-span Information](https://aclanthology.org/2020.emnlp-main.132/)(EMNLP2020): 针对span，提出三个不同的预训练任务
 - Others
   - [Relation Classification via Convolutional Deep Neural Network](https://aclanthology.org/C14-1220/)(COLING2014): 早期工作，CNN-based，给定实体对做关系分类
   - [Relation Classification via Recurrent Neural Network](https://arxiv.org/abs/1508.01006)(arXiv): 早起工作，RNN-based，给定实体对做关系分类
