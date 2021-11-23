@@ -44,6 +44,12 @@ An (incomplete) overview of information extraction
 
 #### Datasets?
 
+- SemEval-2010 Task8: [SemEval-2010 Task 8: Multi-Way Classification of Semantic Relations Between Pairs of Nominals](https://aclanthology.org/W09-2415/): manual-annotated
+- ACE03/04/05: [Website](https://catalog.ldc.upenn.edu/LDC2006T06): manual-annotated, 包括英语/中文/阿拉伯语三种语言
+- TACRED: [Position-aware Attention and Supervised Data Improve Slot Filling](https://aclanthology.org/D17-1004/)(EMNLP2017): manual-annotated
+- WebNLG: [The WebNLG Challenge: Generating Text from RDF Data](https://aclanthology.org/W17-3518/)(INLG2017): 由[Extracting Relational Facts by an End-to-End Neural Model with Copy Mechanism](https://aclanthology.org/P18-1047/)(ACL2018) adapt过来
+- DuIE: [DuIE: A Large-scale Chinese Dataset for Information Extraction](http://tcci.ccf.org.cn/conference/2019/papers/EV10.pdf): 百度发布的中文数据集
+
 ### Distant Supervised Relation Extraction
 
 #### What is it?
@@ -71,7 +77,9 @@ Relation Extraction](https://aclanthology.org/P18-1046/)(ACL2018): 使用GAN来�
 
 #### Datasets?
 
-- [Towards Accurate and Consistent Evaluation: A Dataset for
+- NYT: [Modeling Relations and Their Mentions without Labeled Text](https://link.springer.com/content/pdf/10.1007/978-3-642-15939-8_10.pdf)(ECML-PKDD2010): 远程标注得到，New York Times Corpus + Freebase
+- GDS: [Improving Distantly Supervised Relation Extraction using Word and Entity Based Attention](https://www.akbc.ws/2017/papers/15_paper.pdf): Google Distant Supervised Dataset，远程标注得到
+- NYT-H: [Towards Accurate and Consistent Evaluation: A Dataset for
 Distantly-Supervised Relation Extraction](https://aclanthology.org/2020.coling-main.566/)(COLING2020)
 
 ### Few-shot Relation Extraction
@@ -139,6 +147,16 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
     - [SAIS: Supervising and Augmenting Intermediate Steps for Document-Level Relation Extraction](https://arxiv.org/abs/2109.12093)(arXiv): Eider的基础上，前面引入共指等更多的中间auxiliary tasks
 
 #### Datasets?
+
+- CDR: [BioCreative V CDR task corpus: a resource for chemical disease relation extraction](https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414)
+- GDA: [RENET: A Deep Learning Approach for Extracting Gene-Disease Associations from Literature](https://link.springer.com/chapter/10.1007%2F978-3-030-17083-7_17)
+- SciERC: [Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction](https://aclanthology.org/D18-1360/)(EMNLP2018)
+- SciREX: [SciREX: A Challenge Dataset for Document-Level Information Extraction](https://aclanthology.org/2020.acl-main.670/)(ACL2020), 含有四元关系
+- DocRED: [DocRED: A Large-Scale Document-Level Relation Extraction Dataset](https://aclanthology.org/P19-1074/)(ACL2019)
+- HacRED: [HacRED: A Large-Scale Relation Extraction Dataset Toward Hard Cases in Practical Applications](https://aclanthology.org/2021.findings-acl.249/)(ACL2021 findings)
+- CodRED: [CodRED: A Cross-Document Relation Extraction Dataset for Acquiring Knowledge in the Wild](https://aclanthology.org/2021.emnlp-main.366/)(EMNLP2021)
+- Dialogue-based RE: [Dialogue-Based Relation Extraction](https://aclanthology.org/2020.acl-main.444/)(ACL2020)
+- DDRel: [DDRel: A New Dataset for Interpersonal Relation Classification in Dyadic Dialogues](https://arxiv.org/abs/2012.02553)(AAAI2021)
 
 ### Open Relation Extraction
 
