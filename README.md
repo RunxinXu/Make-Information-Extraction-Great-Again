@@ -171,7 +171,69 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
 
 #### What is it?
 #### What are the challenges?
+
+- 语义理解
+- 不同事件之间的交互依赖
+- 相同事件之间不同角色的交互依赖
 #### Mainstream methods?
+
+- Classic
+  - [Event Extraction via Dynamic Multi-Pooling Convolutional Neural Network](https://aclanthology.org/P15-1017/)(ACL2015): pipeline-based + PCNN
+  - [Joint Event Extraction via Recurrent Neural Networks](https://aclanthology.org/N16-1034/)(NAACL2016): joint + RNN + memory记录已经预测过的事件从而捕捉依赖关系
+- Sequence Labelling
+  - [Exploring Pre-trained Language Models for Event Extraction and Generation](https://aclanthology.org/P19-1522/)(ACL2019): joint + BERT 来做sequence labelling + 类别平衡reweight loss + 数据增强
+  - [One for All: Neural Joint Modeling of Entities and Events](https://arxiv.org/abs/1812.00195)(AAAI2019): joint
+  - [Biomedical Event Extraction as Sequence Labeling](https://aclanthology.org/2020.emnlp-main.431/)(EMNLP2020)
+  - [CasEE: A Joint Learning Framework with Cascade Decoding for Overlapping Event Extraction](https://aclanthology.org/2021.findings-acl.14/)(ACL2021 findings): sequence labelling, 先标trigger，然后given trigger and a specific role去标出可能的argument
+- Graph
+  - [Jointly multiple events extraction via attention-based graph information aggregation](https://aclanthology.org/D18-1156/)(EMNLP2018): joint + dependency tree构图GNN
+  - [Jointly Extracting Event Triggers and Arguments by Dependency-Bridge RNN and Tensor-Based Argument Interaction](https://ojs.aaai.org/index.php/AAAI/article/view/12034)(AAAI2018): 引入dependency tree structure但依然是RNN架构
+  - [Biomedical Event Extraction Based on Knowledge-driven Tree-LSTM](https://aclanthology.org/N19-1145/)(NAACL2019): 基于dependency的Tree-LSTM + 引入external knowledge
+  - [GATE: Graph Attention Transformer Encoder for Cross-lingual Relation and Event Extraction](https://arxiv.org/pdf/2010.03009.pdf)(AAAI2021): Graph
+- Question Answering
+  - [Event Extraction as Machine Reading Comprehension](https://aclanthology.org/2020.emnlp-main.128/)(EMNLP2020)
+  - [Event Extraction by Answering (Almost) Natural Questions](https://aclanthology.org/2020.emnlp-main.49/)(EMNLP2020)
+  - [Event Extraction as Multi-turn Question Answering](https://aclanthology.org/2020.findings-emnlp.73/)(EMNLP2020 findings): reformulate成QA
+- Sequence to Sequence
+  - [Text2Event: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction](https://aclanthology.org/2021.acl-long.217/)(ACL2021): reformulate成Seq2Seq
+- Others
+  - [Joint Event Extraction with Hierarchical Policy Network](https://aclanthology.org/2020.coling-main.239/)(COLING2020): 使用强化学习引入层次化policy network
+  - [Extracting entities and events as a single task using a transition-based neural model](https://www.ijcai.org/proceedings/2019/753)(IJCAI2019): 使用动作序列解决
+- Focus on Event Detection
+  - Document-level Context
+    - [Collective Event Detection via a Hierarchical and Bias Tagging Networks with Gated Multi-level Attention Mechanisms](https://aclanthology.org/D18-1158/)(EMNLP2018): 利用document信息 + 利用不同事件信息
+    - [Document Embedding Enhanced Event Detection with Hierarchical and Supervised Attention](https://aclanthology.org/P18-2066/)(ACL2018): 引入document-level信息
+  - Graph
+    - [Event Detection with Multi-Order Graph Convolution and Aggregated Attention](https://aclanthology.org/D19-1582/)(EMNLP2019): dependency tree做一阶图，加上更高阶的图，做GNN
+    - [Event Detection with Relation-Aware Graph Convolutional Networks](https://aclanthology.org/2020.findings-emnlp.211/)(EMNLP2020 findings): dependency tree构图并考虑边的类型
+  - External Knowledge
+    - [Improving Event Detection via Open-domain Trigger Knowledge](https://aclanthology.org/2020.acl-main.522/)(ACL2020): 引入trigger相关的外部知识 + unlabled data
+    - [Exploiting the Ground-Truth: An Adversarial Imitation Based Knowledge Distillation Approach for Event Detection](https://ojs.aaai.org//index.php/AAAI/article/view/4649)(AAAI2019): 引入外部知识
+    - [Distilling Discrimination and Generalization Knowledge for Event Detection via Delta-Representation Learning](https://aclanthology.org/P19-1429/)(ACL2019)
+  - Others
+    - [Event Detection without Triggers](https://aclanthology.org/N19-1080/)(NAACL2019): Trigger对于事件不是必要的
+    - [Incremental Event Detection via Knowledge Consolidation Networks](https://aclanthology.org/2020.emnlp-main.52/)(EMNLP2020): 不断有新事件类型进来
+    - [How Does Context Matter? On the Robustness of Event Detection with Context-Selective Mask Generalization](https://aclanthology.org/2020.findings-emnlp.229/)(EMNLP2020 findings): 避免对trigger的过度依赖
+- Focus on Event Argument Extraction
+  - [HMEAE: Hierarchical Modular Event Argument Extraction](https://aclanthology.org/D19-1584/)(EMNLP2019): 利用argument role之间所属大类别的内在关系
+  - [Resource-Enhanced Neural Model for Event Argument Extraction](https://aclanthology.org/2020.findings-emnlp.318/)(EMNLP2020 findings): self-training + dependency tree捕捉长距离依赖
+  - [Capturing Event Argument Interaction via A Bi-Directional Entity-Level Recurrent Decoder](https://aclanthology.org/2021.acl-long.18/)(ACL2021): 预测两次从而更好捕捉argument role之间关系
+  - [What the Role is vs. What Plays the Role: Semi-Supervised Event Argument Extraction via Dual Question Answering](https://ojs.aaai.org/index.php/AAAI/article/view/17720)(AAAI2021): MRC + 模型标数据
+#### Datasets?
+
+- ACE05: [Website](https://catalog.ldc.upenn.edu/LDC2006T06): manual-annotated, 包括英语/中文/阿拉伯语三种语言
+- TAC KBP 2015: [Website](https://tac.nist.gov//2015/KBP/Event/index.html)
+- BioNLP Genia 2011: [Overview of Genia Event Task in BioNLP Shared Task 2011](https://aclanthology.org/W11-1802/)
+- MAVEN: [MAVEN: A Massive General Domain Event Detection Dataset](https://aclanthology.org/2020.emnlp-main.129/)
+### Distant-supervised Event Extraction
+
+#### What is it?
+#### What are the challenges?
+#### Mainstream methods?
+
+- [Automatically Labeled Data Generation for Large Scale Event Extraction](https://aclanthology.org/P17-1038/)(ACL2017)
+- [Scale Up Event Extraction Learning via Automatic Training Data Generation](https://arxiv.org/abs/1712.03665)(AAAI2018)
+
 #### Datasets?
 
 ### Few-shot Event Extraction
