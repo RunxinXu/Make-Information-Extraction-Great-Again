@@ -5,6 +5,13 @@ An (incomplete) overview of information extraction
 
 ## Relation Extraction
 
+- Survey
+  - [Deep Neural Network Based Relation Extraction: An Overview](https://arxiv.org/abs/2101.01907)(arXiv): 2021
+  - [Neural relation extraction: a survey](https://arxiv.org/abs/2007.04247)(arXiv): 2020
+  - [Relation Extraction : A Survey](https://arxiv.org/abs/1712.05191)(arXiv): 2017
+  - [A Survey of Deep Learning Methods for Relation Extraction](https://arxiv.org/abs/1705.03645)(arXiv): 2017
+  - [A Review of Relation Extraction](https://www.cs.cmu.edu/~nbach/papers/A-survey-on-Relation-Extraction.pdf)
+
 ### Supervised Sentence-level Relation Extraction
 
 #### What is it?
@@ -139,6 +146,7 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
   - [Multi-view Inference for Relation Extraction with Uncertain Knowledge](https://arxiv.org/abs/2104.13579)(AAAI2021): 引入外部knowledge base协助编码
   - [Document-level Relation Extraction as Semantic Segmentation](https://arxiv.org/abs/2106.03618)(IJCAI2021): 借鉴了CV中的U-Net
   - [Learning Logic Rules for Document-level Relation Extraction](https://aclanthology.org/2021.emnlp-main.95/)(EMNLP2021): 将关系的一些推理规则当成隐变量
+  - [ERICA: Improving Entity and Relation Understanding for Pre-trained Language Models via Contrastive Learning](https://aclanthology.org/2021.acl-long.260/)(ACL2021): 基于远程标注做预训练
   - May Be We Do NOT Need All Sentences
     - [Three Sentences Are All You Need: Local Path Enhanced Document Relation Extraction](https://aclanthology.org/2021.acl-short.126/)(ACL2021): 对于每个实体对只需要最多三个句子就可以提取出来关系了
     - [SIRE: Separate Intra- and Inter-sentential Reasoning for Document-level Relation Extraction](https://aclanthology.org/2021.findings-acl.47/)(ACL2021 findings): 如果实体对共现在同一个句子那么只需要用intra-sentence的表示即可，否则采用inter-sentence的表示 + 考虑多个关系的逻辑推理
@@ -167,6 +175,10 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
 
 ## Event Extraction
 
+- Survey
+  - [An overview of event extraction and its applications](https://arxiv.org/abs/2111.03212)(arXiv): 2021
+  - [A Comprehensive Survey on Schema-based Event Extraction with Deep Learning](https://arxiv.org/abs/2107.02126)(arXiv): 2021
+  - [Extracting Events and Their Relations from Texts: A Survey on Recent Research Progress and Challenges](https://www.sciencedirect.com/science/article/pii/S266665102100005X)(AI Open): 2020
 ### Supervised Sentence-level Event Extraction
 
 #### What is it?
@@ -199,6 +211,7 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
 - Others
   - [Joint Event Extraction with Hierarchical Policy Network](https://aclanthology.org/2020.coling-main.239/)(COLING2020): 使用强化学习引入层次化policy network
   - [Extracting entities and events as a single task using a transition-based neural model](https://www.ijcai.org/proceedings/2019/753)(IJCAI2019): 使用动作序列解决
+  - [CLEVE: Contrastive Pre-training for Event Extraction](https://aclanthology.org/2021.acl-long.491/)(ACL2021): 基于AMR parsing结果做对比学习与训练
 - Focus on Event Detection
   - Document-level Context
     - [Collective Event Detection via a Hierarchical and Bias Tagging Networks with Gated Multi-level Attention Mechanisms](https://aclanthology.org/D18-1158/)(EMNLP2018): 利用document信息 + 利用不同事件信息
@@ -241,18 +254,119 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
 #### What is it?
 #### What are the challenges?
 #### Mainstream methods?
+
+- [Extensively Matching for Few-shot Learning Event Detection](https://aclanthology.org/2020.nuse-1.5/)(nuse@ACL2020)
+- [Exploiting the Matching Information in the Support Set for Few Shot Event Classification](https://arxiv.org/abs/2002.05295)(PAKDD2020)
+- [Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection](https://dl.acm.org/doi/10.1145/3336191.3371796)(WSDM2020)
+- [Few-Shot Event Detection with Prototypical Amortized Conditional Random Field](https://aclanthology.org/2021.findings-acl.3/)(ACL2021 findings)
+- [Graph Learning Regularization and Transfer Learning for Few-Shot Event Detection](https://dl.acm.org/doi/abs/10.1145/3404835.3463054)(SIGIR2021)
+- [Taxonomy-aware Learning for Few-Shot Event Detection](https://dl.acm.org/doi/10.1145/3442381.3449949)(WWW2021)
+- Analysis
+  - [Behind the Scenes: An Exploration of Trigger Biases Problem in Few-Shot Event Classification](https://dl.acm.org/doi/10.1145/3459637.3482236)(CIKM2021)
+  - [Honey or Poison? Solving the Trigger Curse in Few-shot Event Detection via Causal Intervention](https://aclanthology.org/2021.emnlp-main.637/)(EMNLP2021)
+
 #### Datasets?
+- ACE05: [Website](https://catalog.ldc.upenn.edu/LDC2006T06)
+- FewEvent: [Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection](https://dl.acm.org/doi/10.1145/3336191.3371796)
 
 ### Document-level Event Extraction
 
 #### What is it?
 #### What are the challenges?
+
+- 跨句子事件
+- 多事件之间的依赖与交互
 #### Mainstream methods?
+
+- [DCFEE: A Document-level Chinese Financial Event Extraction System based on Automatically Labeled Training Data](https://aclanthology.org/P18-4009/)(ACL2018 demo)
+- [Doc2EDAG: An End-to-End Document-level Framework for Chinese Financial Event Extraction](https://aclanthology.org/D19-1032/)(EMNLP2019)
+- [Document-level Event Extraction via Heterogeneous Graph-based Interaction Model with a Tracker](https://aclanthology.org/2021.acl-long.274/)(ACL2021)
+- [Document-level Event Extraction via Parallel Prediction Networks](https://aclanthology.org/2021.acl-long.492/)(ACL2021)
+- [Revisiting the Evaluation of End-to-end Event Extraction](https://aclanthology.org/2021.findings-acl.405/)(ACL2021 findings)
+- [Exploring Sentence Community for Document-Level Event Extraction](https://aclanthology.org/2021.findings-emnlp.32/)(EMNLP2021 findings)
+- [Template Filling with Generative Transformers](https://aclanthology.org/2021.naacl-main.70/)(NAACL2021)
+- Focus on Event Argument Extraction
+  - [Document-Level Event Role Filler Extraction using Multi-Granularity Contextualized Encoding](https://aclanthology.org/2020.acl-main.714/)(ACL2020)
+  - [GRIT: Generative Role-filler Transformers for Document-level Event Entity Extraction](https://aclanthology.org/2021.eacl-main.52/)(EACL2021)
+  - [Multi-Sentence Argument Linking](https://aclanthology.org/2020.acl-main.718/)(ACL2020)
+  - [A Two-Step Approach for Implicit Event Argument Detection](https://aclanthology.org/2020.acl-main.667/)(ACL2020)
+  - [Inducing Rich Interaction Structures Between Words for Document-Level Event Argument Extraction](https://link.springer.com/chapter/10.1007/978-3-030-75765-6_56)(PAKDD2021)
+  - [Document-Level Event Argument Extraction by Conditional Generation](https://aclanthology.org/2021.naacl-main.69/)(NAACL2019)
+  - [Trigger is Not Sufficient: Exploiting Frame-aware Knowledge for Implicit Event Argument Extraction](https://aclanthology.org/2021.acl-long.360/)(ACL2021)
+  - [Machine Reading Comprehension as Data Augmentation: A Case Study on Implicit Event Argument Extraction](https://aclanthology.org/2021.emnlp-main.214/)(EMNLP2021)
+
 #### Datasets?
+
+- Doc2EDAG: [Doc2EDAG: An End-to-End Document-level Framework for Chinese Financial Event Extraction](https://aclanthology.org/D19-1032/)
+- MUC-4: [Fourth Message Uunderstanding Conference (MUC-4): Proceedings of a Conference Held in McLean, Virginia, June 16-18, 1992](https://aclanthology.org/M92-1000/)
+- RAMS: [Multi-Sentence Argument Linking](https://aclanthology.org/2020.acl-main.718/)(ACL2020)
+- WikiEvents: [Document-Level Event Argument Extraction by Conditional Generation](https://aclanthology.org/2021.naacl-main.69/)
 
 ### Relations Among Events
 
 #### What is it?
 #### What are the challenges?
 #### Mainstream methods?
+
+- Coreference
+  - [Graph-based Event Coreference Resolution](https://aclanthology.org/W09-3208/)
+  - [Joint Inference for Event Coreference Resolution](https://aclanthology.org/C16-1308/)(COLING2016)
+  - [Joint Learning for Event Coreference Resolution](https://aclanthology.org/P17-1009/)(ACL2017)
+  - [Event Coreference Resolution by Iteratively Unfolding Inter-dependencies among Events](https://aclanthology.org/D17-1226/)(EMNLP2017)
+  - [Improving Event Coreference Resolution by Modeling Correlations between Event Coreference Chains and Document Topic Structures](https://aclanthology.org/P18-1045/)(ACL2018)
+  - [Revisiting Joint Modeling of Cross-document Entity and Event Coreference Resolution](https://aclanthology.org/P19-1409/)(ACL2019)
+  - [Improving Event Coreference Resolution by Learning Argument Compatibility from Unlabeled Data](https://aclanthology.org/N19-1085/)(NAACL2019)
+- Causality
+  - [Modeling Document-level Causal Structures for Event Causal Relation Identification](https://aclanthology.org/N19-1179/)(NAACL2018)
+  - [Event Causality Recognition Exploiting Multiple Annotators’ Judgments and Background Knowledge](https://aclanthology.org/D19-1590/)(EMNLP2019)
+  - [Towards Causal Explanation Detection with Pyramid Salient-Aware Network](https://arxiv.org/abs/2009.10288)(CCL2020)
+  - [Knowledge Enhanced Event Causality Identification with Mention Masking Generalizations](https://www.ijcai.org/Proceedings/2020/0499.pdf)(IJCAI2020)
+  - [KnowDis: Knowledge Enhanced Data Augmentation for Event Causality Detection via Distant Supervision](https://aclanthology.org/2020.coling-main.135/)(COLING2020)
+- Temporal
+  - [Neural Temporal Relation Extraction](https://aclanthology.org/E17-2118/)(EACL2017): 神经网络早期工作
+  - [Neural Architecture for Temporal Relation Extraction: A Bi-LSTM Approach for Detecting Narrative Containers](https://aclanthology.org/P17-2035/)(ACL2017)
+  - [Classifying Temporal Relations by Bidirectional LSTM over Dependency Paths](https://aclanthology.org/P17-2001/)(ACL2017): 引入dependency tree
+  - [A Structured Learning Approach to Temporal Relation Extraction](https://aclanthology.org/D17-1108/)(EMNLP2017): 整数规划
+  - [Context-Aware Neural Model for Temporal Information Extraction](https://aclanthology.org/P18-1049/)(ACL2018): memory
+  - [Joint Reasoning for Temporal and Causal Relations](https://aclanthology.org/P18-1212/)(ACL2018)
+  - [Improving Temporal Relation Extraction with a Globally Acquired Statistical Resource](https://aclanthology.org/N18-1077/)(NAACL2018)
+  - [Temporal Information Extraction by Predicting Relative Time-lines](https://aclanthology.org/D18-1155/)(EMNLP2018): 从pair-wise角度转变成map到time-line
+  - [Domain Knowledge Empowered Structured Neural Net for End-to-End Event Temporal Relation Extraction](https://aclanthology.org/2020.emnlp-main.461/)(EMNLP2020)
 #### Datasets?
+
+- TimeBank 1.2: [website](https://catalog.ldc.upenn.edu/LDC2006T08)
+- TimeBank-Dense: [Dense Event Ordering with a Multi-Pass Architecture](https://acla
+nthology.org/Q14-1022/)
+- MATRES: [A Multi-Axis Annotation Scheme for Event Temporal Relations](https://aclanthology.org/P18-1122/)
+- TORGUE: [TORQUE: A Reading Comprehension Dataset of Temporal Ordering Questions](https://aclanthology.org/2020.emnlp-main.88/)(EMNLP2020): 用MRC方式
+- ESTER: [ESTER: A Machine Reading Comprehension Dataset for Reasoning about Event Semantic Relations](https://aclanthology.org/2020.emnlp-main.461/)(EMNLP2021): 多种事件间关系 + MRC方式
+- FinReason: [Probing into the Root: A Dataset for Reason Extraction of Structural Events from Financial Documents](https://aclanthology.org/2021.eacl-main.175/)
+- EventCorefBank: [Joint Entity and Event Coreference Resolution across Documents](https://aclanthology.org/D12-1045/)
+
+
+## Joint Information Extraction
+
+#### What is it?
+#### What are the challenges?
+
+- 各个任务本身的处理
+- 不同任务之间的交互
+
+#### Mainstream methods?
+
+- Graph
+  - [A General Framework for Information Extraction using Dynamic Span Graphs](https://aclanthology.org/N19-1308/)(NAACL2019): NER + coreference + RE
+  - [Entity, Relation, and Event Extraction with Contextualized Span Representations](https://aclanthology.org/D19-1585/)(EMNLP2019): NER + coreference + RE + EE
+  - [A Joint Neural Model for Information Extraction with Global Features](https://aclanthology.org/2020.acl-main.713/)(ACL2020): 引入global的约束
+  - [Abstract Meaning Representation Guided Graph Encoding and Decoding for Joint Information Extraction](https://aclanthology.org/2021.naacl-main.4/)(NAACL2021): 借助AMR parsing的信息
+  - [Cross-Task Instance Representation Interactions and Label Dependencies for Joint Information Extraction with Graph Convolutional Networks](https://aclanthology.org/2021.naacl-main.3/)(NAACL2021)
+  - [Cross-lingual Structure Transfer for Relation and Event Extraction](https://aclanthology.org/D19-1030/)(EMNLP2019): universal dependency parsing. + 跨语言
+
+- Sequence to Sequence
+  - [Structured Prediction as Translation between Augmented Natural Languages](https://openreview.net/forum?id=US-TP-xnXI)(ICLR2021)
+#### Datasets?
+
+- ACE05: [Website](https://catalog.ldc.upenn.edu/LDC2006T06): manual-annotated, 包括英语/中文/阿拉伯语三种语言
+- Light ERE: [A Comparison of the Events and Relations Across ACE, ERE, TAC-KBP, and FrameNet Annotation Standards](https://aclanthology.org/W14-2907/)
+- Rich ERE: [From Light to Rich ERE: Annotation of Entities, Relations, and Events](https://aclanthology.org/W15-0812/)
+- DWIE: [DWIE: An Entity-centric Dataset for Multi-task Document-level Information Extraction](https://arxiv.org/pdf/2009.12626.pdf)
