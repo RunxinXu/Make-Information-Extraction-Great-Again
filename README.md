@@ -41,7 +41,12 @@
   - [End-to-End Neural Relation Extraction with Global Optimization](https://aclanthology.org/D17-1182/) (EMNLP2017): 类似上文，但是引入syntactic信息 + 基于beam search的global optimization
   - [TPLinker: Single-stage Joint Extraction of Entities and Relations Through Token Pair Linking](https://aclanthology.org/2020.coling-main.138/) (COLING2020): 表格中的cell不是直接表示两个词之间的关系，而变成更细粒度的比如两个词是否属于同一个entity的第一个词与最后一个词、两个词是否分别是某个关系中的头实体跟尾实体的第一个词等等
   - [Two are Better than One: Joint Entity and Relation Extraction with Table-Sequence Encoders](https://aclanthology.org/2020.emnlp-main.133/) (EMNLP2020): 提出了table encoder以及序列encoder，table encoder内部cell会交互，table跟sequence的encoder也会交互
-  - [UniRE: A Unified Label Space for Entity Relation Extraction](https://aclanthology.org/2021.acl-long.19/) (ACL2021): 实体类型跟关系类型放到同一个label dpan，提出三个不同的预训练任务
+  - [UniRE: A Unified Label Space for Entity Relation Extraction](https://aclanthology.org/2021.acl-long.19/) (ACL2021): 实体类型跟关系类型放到同一个label space
+- Pre-training
+  - [Matching the Blanks: Distributional Similarity for Relation Learning](https://aclanthology.org/P19-1279/)( ACL2019): 假设两个句子如果含有相同实体对那么表达相同关系，句子表示应该尽量接近
+  - [Learning from Context or Names? An Empirical Study on Neural Relation Extraction](https://aclanthology.org/2020.emnlp-main.298/) (EMNLP2020): 假设两个句子如果含有远程标注的相同关系，那么句子表示应该尽量接近
+  - [Coreferential Reasoning Learning for Language Representation](https://aclanthology.org/2020.emnlp-main.582/) (EMNLP2020): mask掉实体，模型能够预测出句子中与该实体是共指关系的其他实体
+  - [Pre-training Entity Relation Encoder with Intra-span and Inter-span Information](https://aclanthology.org/2020.emnlp-main.132/) (EMNLP2020): 针对intra-span和inter-span提出三种不同的预训练目标
 - Others
   - [Relation Classification via Convolutional Deep Neural Network](https://aclanthology.org/C14-1220/) (COLING2014): 早期工作，CNN-based，给定实体对做关系分类
   - [Relation Classification via Recurrent Neural Network](https://arxiv.org/abs/1508.01006) (arXiv): 早起工作，RNN-based，给定实体对做关系分类
@@ -111,6 +116,7 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 - [Meta-Information Guided Meta-Learning for Few-Shot Relation Classification](https://aclanthology.org/2020.coling-main.140/) (COLING2020): 基于MAML进行改进提出MIML，区别主要在于MAML是为了得到最佳快速adapt到某个任务的初始参数，MIML是得到最佳的meta-parameter，这个meta-parameter能够根据某个任务生成一个能快速adapt到这个任务的初始化参数
 - [Few-shot Relation Extraction via Bayesian Meta-learning on Relation Graphs](https://proceedings.mlr.press/v119/qu20a) (ICML2020): 引入贝叶斯学习+图网络
 - [Label Verbalization and Entailment for Effective Zero and Few-Shot Relation Extraction](https://aclanthology.org/2021.emnlp-main.92/) (EMNLP2021): formulate成NLI任务来做，这样可以先用大量NLI数据做pre-train，将知识迁移过来
+- [Matching the Blanks: Distributional Similarity for Relation Learning](https://aclanthology.org/P19-1279/)( ACL2019): 假设两个句子如果含有相同实体对那么表达相同关系，句子表示应该尽量接近，做预训练之后来做这个任务
 - [ZS-BERT: Towards Zero-Shot Relation Extraction with Attribute Representation Learning](https://aclanthology.org/2021.naacl-main.272/) (NAACL2021): 学习两个映射，一个映射句子，一个映射关系的文本描述，这样只需要关系的文本描述就可以分类实现zero-shot
 
 
