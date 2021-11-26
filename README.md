@@ -1,7 +1,6 @@
 # Make-Information-Extraction-Great-Again
-An (incomplete) overview of information extraction
 
-## Named Entity Recognition
+<font color=red size=5>**Welcome to contribute!!!**</font>
 
 ## Relation Extraction
 
@@ -33,7 +32,7 @@ An (incomplete) overview of information extraction
   - [CopyMTL: Copy Mechanism for Joint Extraction of Entities and Relations with Multi-Task Learning](https://arxiv.org/abs/1911.10438)(AAAI2020): 同上，做了改进
   - [Learning the Extraction Order of Multiple Relational Facts in a Sentence with Reinforcement Learning](https://aclanthology.org/D19-1035/)(EMNLP2019): 提取结构本来无序但是序列生来有序，用强化学习解决这个问题
   - [Minimize Exposure Bias of Seq2Seq Models in Joint Entity and Relation Extraction](https://aclanthology.org/2020.findings-emnlp.23/)(EMNLP2020 findings): Seq2Seq的方法time step过长导致exposure bias，所以尝试把sequential的decoder变成tree
-  - [Effective Modeling of Encoder-Decoder Architecture for Joint Entity and Relation Extraction](https://arxiv.org/pdf/1911.09886.pdf)(AAAI2020):
+  - [Effective Modeling of Encoder-Decoder Architecture for Joint Entity and Relation Extraction](https://arxiv.org/pdf/1911.09886.pdf)(AAAI2020)
 - Question Answering
   - [Entity-Relation Extraction as Multi-turn Question Answering](https://aclanthology.org/P19-1129/)(ACL2019): 建模成多次问答
 - Table
@@ -86,8 +85,7 @@ Relation Extraction](https://aclanthology.org/P18-1046/)(ACL2018): 使用GAN来�
 
 - NYT: [Modeling Relations and Their Mentions without Labeled Text](https://link.springer.com/content/pdf/10.1007/978-3-642-15939-8_10.pdf)(ECML-PKDD2010): 远程标注得到，New York Times Corpus + Freebase
 - GDS: [Improving Distantly Supervised Relation Extraction using Word and Entity Based Attention](https://www.akbc.ws/2017/papers/15_paper.pdf): Google Distant Supervised Dataset，远程标注得到
-- NYT-H: [Towards Accurate and Consistent Evaluation: A Dataset for
-Distantly-Supervised Relation Extraction](https://aclanthology.org/2020.coling-main.566/)(COLING2020)
+- NYT-H: [Towards Accurate and Consistent Evaluation: A Dataset for Distantly-Supervised Relation Extraction](https://aclanthology.org/2020.coling-main.566/)(COLING2020)
 
 ### Few-shot Relation Extraction
 
@@ -104,8 +102,7 @@ Distantly-Supervised Relation Extraction](https://aclanthology.org/2020.coling-m
 - [Meta-Information Guided Meta-Learning for Few-Shot Relation Classification](https://aclanthology.org/2020.coling-main.140/)(COLING2020): 基于MAML进行改进提出MIML，区别主要在于MAML是为了得到最佳快速adapt到某个任务的初始参数，MIML是得到最佳的meta-parameter，这个meta-parameter能够根据某个任务生成一个能快速adapt到这个任务的初始化参数
 - [Few-shot Relation Extraction via Bayesian Meta-learning on Relation Graphs](https://proceedings.mlr.press/v119/qu20a)(ICML2020): 引入贝叶斯学习+图网络
 - [Label Verbalization and Entailment for Effective Zero and Few-Shot Relation Extraction](https://aclanthology.org/2021.emnlp-main.92/)(EMNLP2021): formulate成NLI任务来做，这样可以先用大量NLI数据做pre-train，将知识迁移过来
-- [ZS-BERT: Towards Zero-Shot Relation Extraction with Attribute
-Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL2021): 学习两个映射，一个映射句子，一个映射关系的文本描述，这样只需要关系的文本描述就可以分类实现zero-shot
+- [ZS-BERT: Towards Zero-Shot Relation Extraction with Attribute Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL2021): 学习两个映射，一个映射句子，一个映射关系的文本描述，这样只需要关系的文本描述就可以分类实现zero-shot
 
 
 #### Datasets?
@@ -140,6 +137,7 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
     - [Document-level Relation Extraction with Dual-tier Heterogeneous Graph](https://aclanthology.org/2020.coling-main.143/)(COLING2020): 首先一个基于dependency tree的syntactic graph，之后接一个以mention、entity为节点的semantic graph
 - Non-graph
   - [Simultaneously Self-Attending to All Mentions for Full-Abstract Biological Relation Extraction](https://aclanthology.org/N18-1080/)(NAACL2018): Transformer+Convolution+Biaffine
+  - [Document-Level N-ary Relation Extraction with Multiscale Representation Learning](https://aclanthology.org/N19-1370/)(NAACL2019): mention-level representation + entity-level representation
   - [Entity and Evidence Guided Document-Level Relation Extraction](https://aclanthology.org/2021.repl4nlp-1.30/)(repl4nlp@ACL2021): 引入evidence prediction作为auxiliary task + 编码的时候输入concat上头实体
   - [Document-Level Relation Extraction with Adaptive Thresholding and Localized Context Pooling](https://ojs.aaai.org/index.php/AAAI/article/view/17717/17524)(AAAI2021):引入一个辅助类来做adaptive threshold处理multi-label问题 + 每个实体对更有针对性地提取context用于关系预测
   - [Entity Structure Within and Throughout: Modeling Mention Dependencies for Document-Level Relation Extraction](https://arxiv.org/abs/2102.10249)(AAAI2021): 魔改Transformer的self-attention模块，根据token跟token之间是否属于同一个句子、是否属于同一个实体、是否一个为实体一个为非实体之类的分为总共六类，每一类有不同的attention计算方法
@@ -147,6 +145,7 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
   - [Document-level Relation Extraction as Semantic Segmentation](https://arxiv.org/abs/2106.03618)(IJCAI2021): 借鉴了CV中的U-Net
   - [Learning Logic Rules for Document-level Relation Extraction](https://aclanthology.org/2021.emnlp-main.95/)(EMNLP2021): 将关系的一些推理规则当成隐变量
   - [ERICA: Improving Entity and Relation Understanding for Pre-trained Language Models via Contrastive Learning](https://aclanthology.org/2021.acl-long.260/)(ACL2021): 基于远程标注做预训练
+  - [Document-level Entity-based Extraction as Template Generation](https://aclanthology.org/2021.emnlp-main.426/)(EMNLP2021): Seq2Seq
   - May Be We Do NOT Need All Sentences
     - [Three Sentences Are All You Need: Local Path Enhanced Document Relation Extraction](https://aclanthology.org/2021.acl-short.126/)(ACL2021): 对于每个实体对只需要最多三个句子就可以提取出来关系了
     - [SIRE: Separate Intra- and Inter-sentential Reasoning for Document-level Relation Extraction](https://aclanthology.org/2021.findings-acl.47/)(ACL2021 findings): 如果实体对共现在同一个句子那么只需要用intra-sentence的表示即可，否则采用inter-sentence的表示 + 考虑多个关系的逻辑推理
@@ -166,12 +165,6 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
 - Dialogue-based RE: [Dialogue-Based Relation Extraction](https://aclanthology.org/2020.acl-main.444/)(ACL2020)
 - DDRel: [DDRel: A New Dataset for Interpersonal Relation Classification in Dyadic Dialogues](https://arxiv.org/abs/2012.02553)(AAAI2021)
 
-### Open Relation Extraction
-
-#### What is it?
-#### What are the challenges?
-#### Mainstream methods?
-#### Datasets?
 
 ## Event Extraction
 
@@ -288,6 +281,7 @@ Representation Learning](https://aclanthology.org/2021.naacl-main.272/)(NAACL202
 - Focus on Event Argument Extraction
   - [Document-Level Event Role Filler Extraction using Multi-Granularity Contextualized Encoding](https://aclanthology.org/2020.acl-main.714/)(ACL2020)
   - [GRIT: Generative Role-filler Transformers for Document-level Event Entity Extraction](https://aclanthology.org/2021.eacl-main.52/)(EACL2021)
+  - [- [Document-level Entity-based Extraction as Template Generation](https://aclanthology.org/2021.emnlp-main.426/)(EMNLP2021): Seq2Seq
   - [Multi-Sentence Argument Linking](https://aclanthology.org/2020.acl-main.718/)(ACL2020)
   - [A Two-Step Approach for Implicit Event Argument Detection](https://aclanthology.org/2020.acl-main.667/)(ACL2020)
   - [Inducing Rich Interaction Structures Between Words for Document-Level Event Argument Extraction](https://link.springer.com/chapter/10.1007/978-3-030-75765-6_56)(PAKDD2021)
