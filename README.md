@@ -31,6 +31,7 @@ And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.
 
 - Sequence Labelling
   - [Joint Extraction of Entities and Relations Based on a Novel Tagging Scheme](https://aclanthology.org/P17-1113/) (ACL2017): 序列标注，tag有三部分，第一部分表示实体开头/中间/结尾，第二部分表示所属关系，第三部分表示是头实体还是尾实体
+  - [Adversarial training for multi-context joint entity and relation extraction](https://aclanthology.org/D18-1307/) (EMNLP2018): 引入对抗训练
   - [A Novel Cascade Binary Tagging Framework for Relational Triple Extraction](https://aclanthology.org/2020.acl-main.136/) (ACL2020): 先序列标注出头实体，再根据头实体以及某个特定关系序列标注出尾实体
   - [PRGC: Potential Relation and Global Correspondence Based Joint Relational Triple Extraction](https://aclanthology.org/2021.acl-long.486/) (ACL2021): 同样先标头实体再标relation-specific的尾实体，改进在于先判断可能的relation，有可能出现的才去标对应的尾实体
 - Sequence to Sequence
