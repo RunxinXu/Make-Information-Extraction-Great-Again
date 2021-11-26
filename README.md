@@ -45,6 +45,17 @@ Contributor: [Runxin Xu](https://github.com/RunxinXu), [Shuang Zeng](https://git
   - [TPLinker: Single-stage Joint Extraction of Entities and Relations Through Token Pair Linking](https://aclanthology.org/2020.coling-main.138/) (COLING2020): 表格中的cell不是直接表示两个词之间的关系，而变成更细粒度的比如两个词是否属于同一个entity的第一个词与最后一个词、两个词是否分别是某个关系中的头实体跟尾实体的第一个词等等
   - [Two are Better than One: Joint Entity and Relation Extraction with Table-Sequence Encoders](https://aclanthology.org/2020.emnlp-main.133/) (EMNLP2020): 提出了table encoder以及序列encoder，table encoder内部cell会交互，table跟sequence的encoder也会交互
   - [UniRE: A Unified Label Space for Entity Relation Extraction](https://aclanthology.org/2021.acl-long.19/) (ACL2021): 实体类型跟关系类型放到同一个label space
+- Graph
+  - [A Walk-based Model on Entity Graphs for Relation Extraction](https://aclanthology.org/P18-2014/)(ACL2018): 每个实体是一个点构成全连接图，两个实体之间的边表示关系，该边表示同样based on其它路径表示
+  - [Leveraging Dependency Forest for Neural Medical Relation Extraction](https://aclanthology.org/D19-1020/)(EMNLP2019): 利用多棵independent的dependency parsing tree构图
+  - [Graph Neural Networks with Generated Parameters for Relation Extraction](https://aclanthology.org/P19-1128/)(ACL2019): 实体做节点，生成边的表示
+  - [GraphRel: Modeling Text as Relational Graphs for Joint Entity and Relation Extraction](https://aclanthology.org/P19-1136/)(ACL2019): 两阶段。第一阶段dependency tree构图，第二阶段用第一阶段预测结果构图做refinement
+  - [AGGCN Attention Guided Graph Convolutional Networks for Relation Extraction](https://aclanthology.org/P19-1024)(ACL2019): 多个含有图的层，第一层用dependency tree构图，后面基于attention结果构图，最后把所有层结果利用起来
+  - [Joint Type Inference on Entities and Relations via Graph Convolutional Networks](https://aclanthology.org/P19-1131/)(ACL2019): 二分图，实体在一边，关系在另一边
+  - [Relation of the Relations: A New Paradigm of the Relation Extraction Problem](https://arxiv.org/abs/2006.03719) (arXiv): 把实体两两之间关系也作为节点，连同实体节点一起构图
+- Span-level
+  - [Span-Level Model for Relation Extraction](https://aclanthology.org/P19-1525/)(ACL2019): 用span其实是为了解决nested NER
+  - [Span-based Joint Entity and Relation Extraction with Transformer Pre-training](https://arxiv.org/abs/1909.07755)(ECAI2020)
 - Pre-training
   - [Matching the Blanks: Distributional Similarity for Relation Learning](https://aclanthology.org/P19-1279/)( ACL2019): 假设两个句子如果含有相同实体对那么表达相同关系，句子表示应该尽量接近
   - [Learning from Context or Names? An Empirical Study on Neural Relation Extraction](https://aclanthology.org/2020.emnlp-main.298/) (EMNLP2020): 假设两个句子如果含有远程标注的相同关系，那么句子表示应该尽量接近
