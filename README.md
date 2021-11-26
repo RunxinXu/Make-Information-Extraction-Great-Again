@@ -2,6 +2,9 @@
 
 **Welcome to contribute!!!**
 
+Contributor: [Runxin Xu](https://github.com/RunxinXu), [Shuang Zeng](https://github.com/DreamInvoker)
+
+
 ## Relation Extraction
 
 - Survey
