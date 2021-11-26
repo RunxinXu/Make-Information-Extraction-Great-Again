@@ -4,6 +4,8 @@
 
 Contributor: [Runxin Xu](https://github.com/RunxinXu), [Shuang Zeng](https://github.com/DreamInvoker)
 
+And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.com/Yifan-Song793) for their suggestions!
+
 
 ## Relation Extraction
 
@@ -35,6 +37,7 @@ Contributor: [Runxin Xu](https://github.com/RunxinXu), [Shuang Zeng](https://git
   - [Extracting Relational Facts by an End-to-End Neural Model with Copy Mechanism](https://aclanthology.org/P18-1047/) (ACL2018): 输入句子，输出提取结果序列，结果序列格式是 => r1, h1, t1, r2, h2, t2, ...
   - [CopyMTL: Copy Mechanism for Joint Extraction of Entities and Relations with Multi-Task Learning](https://arxiv.org/abs/1911.10438) (AAAI2020): 同上，做了改进
   - [Learning the Extraction Order of Multiple Relational Facts in a Sentence with Reinforcement Learning](https://aclanthology.org/D19-1035/) (EMNLP2019): 提取结构本来无序但是序列生来有序，用强化学习解决这个问题
+  - [Joint Entity and Relation Extraction with Set Prediction Networks](https://arxiv.org/abs/2011.01675) (arXiv2020): 同样针对无序的问题，用non-autoregressive decoder变成集合预测问题
   - [Minimize Exposure Bias of Seq2Seq Models in Joint Entity and Relation Extraction](https://aclanthology.org/2020.findings-emnlp.23/) (EMNLP2020 findings): Seq2Seq的方法time step过长导致exposure bias，所以尝试把sequential的decoder变成tree
   - [Effective Modeling of Encoder-Decoder Architecture for Joint Entity and Relation Extraction](https://arxiv.org/pdf/1911.09886.pdf) (AAAI2020)
 - Question Answering
