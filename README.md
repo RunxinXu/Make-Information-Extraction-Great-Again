@@ -1,6 +1,6 @@
 # Make-Information-Extraction-Great-Again
 
-<font color=red size=5>**Welcome to contribute!!!**</font>
+**Welcome to contribute!!!**
 
 ## Relation Extraction
 
@@ -117,6 +117,7 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 - [Few-shot Relation Extraction via Bayesian Meta-learning on Relation Graphs](https://proceedings.mlr.press/v119/qu20a) (ICML2020): 引入贝叶斯学习+图网络
 - [Label Verbalization and Entailment for Effective Zero and Few-Shot Relation Extraction](https://aclanthology.org/2021.emnlp-main.92/) (EMNLP2021): formulate成NLI任务来做，这样可以先用大量NLI数据做pre-train，将知识迁移过来
 - [Matching the Blanks: Distributional Similarity for Relation Learning](https://aclanthology.org/P19-1279/)( ACL2019): 假设两个句子如果含有相同实体对那么表达相同关系，句子表示应该尽量接近，做预训练之后来做这个任务
+- [MapRE: An Effective Semantic Mapping Approach for Low-resource Relation Extraction](https://aclanthology.org/2021.emnlp-main.212/) (EMNLP2021): 考虑label的semantic information来做pre-training
 - [ZS-BERT: Towards Zero-Shot Relation Extraction with Attribute Representation Learning](https://aclanthology.org/2021.naacl-main.272/) (NAACL2021): 学习两个映射，一个映射句子，一个映射关系的文本描述，这样只需要关系的文本描述就可以分类实现zero-shot
 
 
