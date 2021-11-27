@@ -10,11 +10,15 @@ And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.
 ## Relation Extraction
 
 - Survey
+  - [Deep Neural Approaches to Relation Triplets Extraction: A Comprehensive Survey](https://arxiv.org/abs/2103.16929) (arXiv): 2021
   - [Deep Neural Network Based Relation Extraction: An Overview](https://arxiv.org/abs/2101.01907) (arXiv): 2021
   - [Neural relation extraction: a survey](https://arxiv.org/abs/2007.04247) (arXiv): 2020
+  - [More Data, More Relations, More Context and More Openness: A Review and Outlook for Relation Extraction](https://arxiv.org/pdf/2004.03186.pdf) (arXiv): 2020
+  - [Relation Extraction Using Distant Supervision: A Survey](https://exascale.info/assets/pdf/smirnova2019acmcsur.pdf) (arXiv): 2018
   - [Relation Extraction : A Survey](https://arxiv.org/abs/1712.05191) (arXiv): 2017
   - [A Survey of Deep Learning Methods for Relation Extraction](https://arxiv.org/abs/1705.03645) (arXiv): 2017
-  - [A Review of Relation Extraction](https://www.cs.cmu.edu/~nbach/papers/A-survey-on-Relation-Extraction.pdf)
+  - [A Review of Relation Extraction](https://www.cs.cmu.edu/~nbach/papers/A-survey-on-Relation-Extraction.pdf) (Literature review for Language and Statistics II): 2007
+  - [Kernel methods for relation extraction](https://www.jmlr.org/papers/volume3/zelenko03a/zelenko03a.pdf) (JMLR): 2003
 
 ### Supervised Sentence-level Relation Extraction
 
@@ -478,6 +482,20 @@ As illustrated in the figure, the entities are recognized, with the relation tri
 - Rich ERE: [From Light to Rich ERE: Annotation of Entities, Relations, and Events](https://aclanthology.org/W15-0812/)
 - DWIE: [DWIE: An Entity-centric Dataset for Multi-task Document-level Information Extraction](https://arxiv.org/pdf/2009.12626.pdf)
 
+
+## Coreference Resolution
+
+- Survey
+  - [Anaphora and coreference resolution: A review](https://www.sciencedirect.com/science/article/pii/S1566253519303677) (Information Fision): 2020
+  - [Bridging Resolution: A Survey of the State of the Art](https://aclanthology.org/2020.coling-main.331.pdf) (COLING): 2020
+  - [A Brief Survey and Comparative Study of Recent Development of Pronoun Coreference Resolution](https://arxiv.org/abs/2009.12721) (arxiv): 2020
+  - [A Neural Entity Coreference Resolution Review](https://arxiv.org/abs/1910.09329) (arxiv): 2019
+  
+
+#### What is it?
+#### What are the challenges?
+#### Mainstream methods?
+#### Datasets?
 
 ## Others
 - Named Entity Recognition
