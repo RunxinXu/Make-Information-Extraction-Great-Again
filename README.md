@@ -491,10 +491,23 @@ As illustrated in the figure, the entities are recognized, with the relation tri
   - [A Brief Survey and Comparative Study of Recent Development of Pronoun Coreference Resolution](https://arxiv.org/abs/2009.12721) (arxiv): 2020
   - [A Neural Entity Coreference Resolution Review](https://arxiv.org/abs/1910.09329) (arxiv): 2019
   
-#### What is it?
-#### What are the challenges?
-#### Mainstream methods?
-#### Datasets?
+### What is it?
+
+Coreference resolution is the task of clustering mention spans in text that refer to the same underlying real world entities.
+
+Example:
+
+![image](./figure/coreference-resolution.png)
+
+"I", "my", and "she" belong to the same cluster and "Obama" and "he" belong to the same cluster.
+
+In this task, mention span may be named entity mention, pronoun, verb, etc.
+
+### What are the challenges?
+
+### Mainstream methods?
+
+### Datasets?
 
 ## Others
 - Named Entity Recognition
