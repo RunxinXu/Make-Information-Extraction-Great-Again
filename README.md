@@ -54,18 +54,18 @@ And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.
   - [Two are Better than One: Joint Entity and Relation Extraction with Table-Sequence Encoders](https://aclanthology.org/2020.emnlp-main.133/) (EMNLP2020): 提出了table encoder以及序列encoder，table encoder内部cell会交互，table跟sequence的encoder也会交互
   - [UniRE: A Unified Label Space for Entity Relation Extraction](https://aclanthology.org/2021.acl-long.19/) (ACL2021): 实体类型跟关系类型放到同一个label space
 - Graph
-  - [A Walk-based Model on Entity Graphs for Relation Extraction](https://aclanthology.org/P18-2014/)(ACL2018): 每个实体是一个点构成全连接图，两个实体之间的边表示关系，该边表示同样based on其它路径表示
-  - [Leveraging Dependency Forest for Neural Medical Relation Extraction](https://aclanthology.org/D19-1020/)(EMNLP2019): 利用多棵independent的dependency parsing tree构图
-  - [Graph Neural Networks with Generated Parameters for Relation Extraction](https://aclanthology.org/P19-1128/)(ACL2019): 实体做节点，生成边的表示
-  - [GraphRel: Modeling Text as Relational Graphs for Joint Entity and Relation Extraction](https://aclanthology.org/P19-1136/)(ACL2019): 两阶段。第一阶段dependency tree构图，第二阶段用第一阶段预测结果构图做refinement
-  - [AGGCN Attention Guided Graph Convolutional Networks for Relation Extraction](https://aclanthology.org/P19-1024)(ACL2019): 多个含有图的层，第一层用dependency tree构图，后面基于attention结果构图，最后把所有层结果利用起来
-  - [Joint Type Inference on Entities and Relations via Graph Convolutional Networks](https://aclanthology.org/P19-1131/)(ACL2019): 二分图，实体在一边，关系在另一边
+  - [A Walk-based Model on Entity Graphs for Relation Extraction](https://aclanthology.org/P18-2014/) (ACL2018): 每个实体是一个点构成全连接图，两个实体之间的边表示关系，该边表示同样based on其它路径表示
+  - [Leveraging Dependency Forest for Neural Medical Relation Extraction](https://aclanthology.org/D19-1020/) (EMNLP2019): 利用多棵independent的dependency parsing tree构图
+  - [Graph Neural Networks with Generated Parameters for Relation Extraction](https://aclanthology.org/P19-1128/) (ACL2019): 实体做节点，生成边的表示
+  - [GraphRel: Modeling Text as Relational Graphs for Joint Entity and Relation Extraction](https://aclanthology.org/P19-1136/) (ACL2019): 两阶段。第一阶段dependency tree构图，第二阶段用第一阶段预测结果构图做refinement
+  - [AGGCN Attention Guided Graph Convolutional Networks for Relation Extraction](https://aclanthology.org/P19-1024) (ACL2019): 多个含有图的层，第一层用dependency tree构图，后面基于attention结果构图，最后把所有层结果利用起来
+  - [Joint Type Inference on Entities and Relations via Graph Convolutional Networks](https://aclanthology.org/P19-1131/) (ACL2019): 二分图，实体在一边，关系在另一边
   - [Relation of the Relations: A New Paradigm of the Relation Extraction Problem](https://arxiv.org/abs/2006.03719) (arXiv): 把实体两两之间关系也作为节点，连同实体节点一起构图
 - Span-level
-  - [Span-Level Model for Relation Extraction](https://aclanthology.org/P19-1525/)(ACL2019): 用span其实是为了解决nested NER
-  - [Span-based Joint Entity and Relation Extraction with Transformer Pre-training](https://arxiv.org/abs/1909.07755)(ECAI2020)
+  - [Span-Level Model for Relation Extraction](https://aclanthology.org/P19-1525/) (ACL2019): 用span其实是为了解决nested NER
+  - [Span-based Joint Entity and Relation Extraction with Transformer Pre-training](https://arxiv.org/abs/1909.07755) (ECAI2020)
 - Pre-training
-  - [Matching the Blanks: Distributional Similarity for Relation Learning](https://aclanthology.org/P19-1279/)( ACL2019): 假设两个句子如果含有相同实体对那么表达相同关系，句子表示应该尽量接近
+  - [Matching the Blanks: Distributional Similarity for Relation Learning](https://aclanthology.org/P19-1279/) ( ACL2019): 假设两个句子如果含有相同实体对那么表达相同关系，句子表示应该尽量接近
   - [Learning from Context or Names? An Empirical Study on Neural Relation Extraction](https://aclanthology.org/2020.emnlp-main.298/) (EMNLP2020): 假设两个句子如果含有远程标注的相同关系，那么句子表示应该尽量接近
   - [Coreferential Reasoning Learning for Language Representation](https://aclanthology.org/2020.emnlp-main.582/) (EMNLP2020): mask掉实体，模型能够预测出句子中与该实体是共指关系的其他实体
   - [Pre-training Entity Relation Encoder with Intra-span and Inter-span Information](https://aclanthology.org/2020.emnlp-main.132/) (EMNLP2020): 针对intra-span和inter-span提出三种不同的预训练目标
@@ -138,7 +138,7 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 - [Meta-Information Guided Meta-Learning for Few-Shot Relation Classification](https://aclanthology.org/2020.coling-main.140/) (COLING2020): 基于MAML进行改进提出MIML，区别主要在于MAML是为了得到最佳快速adapt到某个任务的初始参数，MIML是得到最佳的meta-parameter，这个meta-parameter能够根据某个任务生成一个能快速adapt到这个任务的初始化参数
 - [Few-shot Relation Extraction via Bayesian Meta-learning on Relation Graphs](https://proceedings.mlr.press/v119/qu20a) (ICML2020): 引入贝叶斯学习+图网络
 - [Label Verbalization and Entailment for Effective Zero and Few-Shot Relation Extraction](https://aclanthology.org/2021.emnlp-main.92/) (EMNLP2021): formulate成NLI任务来做，这样可以先用大量NLI数据做pre-train，将知识迁移过来
-- [Matching the Blanks: Distributional Similarity for Relation Learning](https://aclanthology.org/P19-1279/)( ACL2019): 假设两个句子如果含有相同实体对那么表达相同关系，句子表示应该尽量接近，做预训练之后来做这个任务
+- [Matching the Blanks: Distributional Similarity for Relation Learning](https://aclanthology.org/P19-1279/) ( ACL2019): 假设两个句子如果含有相同实体对那么表达相同关系，句子表示应该尽量接近，做预训练之后来做这个任务
 - [MapRE: An Effective Semantic Mapping Approach for Low-resource Relation Extraction](https://aclanthology.org/2021.emnlp-main.212/) (EMNLP2021): 考虑label的semantic information来做pre-training
 - [ZS-BERT: Towards Zero-Shot Relation Extraction with Attribute Representation Learning](https://aclanthology.org/2021.naacl-main.272/) (NAACL2021): 学习两个映射，一个映射句子，一个映射关系的文本描述，这样只需要关系的文本描述就可以分类实现zero-shot
 
@@ -426,7 +426,6 @@ nthology.org/Q14-1022/)
   - [A Brief Survey and Comparative Study of Recent Development of Pronoun Coreference Resolution](https://arxiv.org/abs/2009.12721) (arxiv): 2020
   - [A Neural Entity Coreference Resolution Review](https://arxiv.org/abs/1910.09329) (arxiv): 2019
   
-
 #### What is it?
 #### What are the challenges?
 #### Mainstream methods?
