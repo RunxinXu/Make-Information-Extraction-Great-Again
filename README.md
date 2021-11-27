@@ -23,6 +23,12 @@ And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.
 ### Supervised Sentence-level Relation Extraction
 
 #### What is it?
+
+![image](./figure/supervised-sentence-level-re.png)
+Given a sentence, the task aims at extracting the (head entity, relation, tail entity) triples out of the sentence.
+
+As illustrated in the figure, we extract (United States, Country_president, Trump) and (Apple Inc, Company_CEO, Tim Cook) out of the sentence.
+
 #### What are the challenges?
 
 - How to better understand the semantics of the sentence?
@@ -90,6 +96,17 @@ And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.
 ### Distant Supervised Relation Extraction
 
 #### What is it?
+
+![image](./figure/distant-supervised-re.png)
+
+Distant supervised RE aims at annotate the unlabeled sentences with the large-scale knowledge base. If the sentence has two entities that also occur in the knowledge graph and have a specific relation, we assume that this sentence exactly expresses such relation. Obviously, it inevitably brings noise (false positive examples).
+
+
+![image](./figure/distant-supervised-re-2.png)
+
+People usually formulate the problem as a bag-level RE task.
+A bag means multiple sentences with the same entity pair.
+Given a bag, we have to correctly predict the relations between such entity pair, while some sentences in the bag may be the false positive examples.
 #### What are the challenges?
 
 - How to better filter those false positive examples (noise) and decrease the impact of them?
@@ -124,6 +141,10 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 ### Few-shot Relation Extraction
 
 #### What is it?
+
+![image](./figure/few-shot-re.png)
+The few-shot RE problem is usually modeled as a N-way-K-shot task following traditional meta-learning paradigm.
+Given N relation types with K instances, the task aims at predicting which relation type the query (test) instance belongs to.
 #### What are the challenges?
 
 - How to precisely capture the characteristics of different relation types given few training data?
@@ -151,6 +172,12 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 ### Document-level Relation Extraction
 
 #### What is it?
+
+![image](./figure/document-level-re.png)
+
+Given a document that consists of multiple sentences, the task aims at extracting relation triples out of the document.
+
+
 #### What are the challenges?
 
 - How to better capture the semantics of the whole long document?
@@ -214,6 +241,16 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 ### Supervised Sentence-level Event Extraction
 
 #### What is it?
+
+![image](./figure/supervised-sentence-level-ee.png)
+
+Given a sentence, the task aims at handling four sub-tasks:
+- Event Detection
+  - Trigger Identification: Identify the trigger that triggers a specific event (e.g., *held* and *come* in the figure).
+  - Event Classification: Predict what event type the trigger has triggerred (e.g., *Meet* and *Transport* in the figure).
+- Event Argument Extraction
+  - Argument Identification: Identify potential arguments for a specific event (e.g., *Thailand*, *2024*, and etc. in the figure).
+  - Argument Role Prediction: Predict what role the argument plays in the event (e.g., *place*, *time*, and etc. in the figure).
 #### What are the challenges?
 
 - How to better understand the semantics of the sentence?
@@ -273,6 +310,12 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 ### Distant-supervised Event Extraction
 
 #### What is it?
+
+![image](./figure/distant-supervised-ee.png)
+
+Distant-supervised EE annotate the unlabeled sentence with the help of the large-scale knowledge base.
+As illustrated in the figure, we annotate the sentence from Wikipedia with the knowledge in Freebase.
+
 #### What are the challenges?
 
 - How to deal with the noise brought by distant supervision?
@@ -287,6 +330,11 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 ### Few-shot Event Extraction
 
 #### What is it?
+
+![image](./figure/few-shot-ee.png)
+
+Few-shot Event Extraction is usually formulated as a N-way-K-shot meta-learning problem.
+Given N event types with K instances, the task aims at predicting which event type the query instance belongs to.
 #### What are the challenges?
 
 - How to precisely capture the characteristics of different relation types given few training data?
@@ -312,6 +360,10 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 ### Document-level Event Extraction
 
 #### What is it?
+
+![image](./figure/document-level-ee.png)
+
+Given a document that consists of multiple sentences, the task aims at extracting events out of the whole document.
 #### What are the challenges?
 
 - How to better capture the semantics of the whole long document?
@@ -347,6 +399,12 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 ### Relations Among Events
 
 #### What is it?
+
+![image](./figure/relation-among-events.png)
+
+Given a text, the tasks aims at predicting the relation among different events that are expressed by the text.
+The relation types usually include *coreference*, *causality*, *temporal*, *sub-event*, and etc.
+
 #### What are the challenges?
 
 - How to better understand the relations between different events?
@@ -392,6 +450,13 @@ nthology.org/Q14-1022/)
 ## Joint Information Extraction
 
 #### What is it?
+
+![image](./figure/joint-ie.png)
+
+Joint Information Extraction aims at handling multiple extraction tasks simultaneously, including named entity recognition, relation extraction, event extraction, and etc.
+As illustrated in the figure, the entities are recognized, with the relation triples (man, ART, taxicab), (man, PHYS, checkpoint), (soldiers, PHYS, checkpoint) and the *Transport* events with *Artifact* and *Destination* arguments.
+
+
 #### What are the challenges?
 
 - How to achieve satisfactory performance for each sub-tasks?
