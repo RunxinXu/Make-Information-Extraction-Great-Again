@@ -418,6 +418,20 @@ nthology.org/Q14-1022/)
 - DWIE: [DWIE: An Entity-centric Dataset for Multi-task Document-level Information Extraction](https://arxiv.org/pdf/2009.12626.pdf)
 
 
+## Coreference Resolution
+
+- Survey
+  - [Anaphora and coreference resolution: A review](https://www.sciencedirect.com/science/article/pii/S1566253519303677) (Information Fision): 2020
+  - [Bridging Resolution: A Survey of the State of the Art](https://aclanthology.org/2020.coling-main.331.pdf) (COLING): 2020
+  - [A Brief Survey and Comparative Study of Recent Development of Pronoun Coreference Resolution](https://arxiv.org/abs/2009.12721) (arxiv): 2020
+  - [A Neural Entity Coreference Resolution Review](https://arxiv.org/abs/1910.09329) (arxiv): 2019
+  
+
+#### What is it?
+#### What are the challenges?
+#### Mainstream methods?
+#### Datasets?
+
 ## Others
 - Named Entity Recognition
 - Open-domain Information Extraction
