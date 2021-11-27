@@ -10,11 +10,15 @@ And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.
 ## Relation Extraction
 
 - Survey
+  - [Deep Neural Approaches to Relation Triplets Extraction: A Comprehensive Survey](https://arxiv.org/abs/2103.16929) (arXiv): 2021
   - [Deep Neural Network Based Relation Extraction: An Overview](https://arxiv.org/abs/2101.01907) (arXiv): 2021
   - [Neural relation extraction: a survey](https://arxiv.org/abs/2007.04247) (arXiv): 2020
+  - [More Data, More Relations, More Context and More Openness: A Review and Outlook for Relation Extraction](https://arxiv.org/pdf/2004.03186.pdf) (arXiv): 2020
+  - [Relation Extraction Using Distant Supervision: A Survey](https://exascale.info/assets/pdf/smirnova2019acmcsur.pdf) (arXiv): 2018
   - [Relation Extraction : A Survey](https://arxiv.org/abs/1712.05191) (arXiv): 2017
   - [A Survey of Deep Learning Methods for Relation Extraction](https://arxiv.org/abs/1705.03645) (arXiv): 2017
-  - [A Review of Relation Extraction](https://www.cs.cmu.edu/~nbach/papers/A-survey-on-Relation-Extraction.pdf)
+  - [A Review of Relation Extraction](https://www.cs.cmu.edu/~nbach/papers/A-survey-on-Relation-Extraction.pdf) (Literature review for Language and Statistics II): 2007
+  - [Kernel methods for relation extraction](https://www.jmlr.org/papers/volume3/zelenko03a/zelenko03a.pdf) (JMLR): 2003
 
 ### Supervised Sentence-level Relation Extraction
 
