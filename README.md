@@ -520,10 +520,10 @@ As illustrated in the figure, the entities are recognized, with the relation tri
 ## Coreference Resolution
 
 - Survey
-  - [Anaphora and coreference resolution: A review](https://www.sciencedirect.com/science/article/pii/S1566253519303677) (Information Fision): 2020
   - [Bridging Resolution: A Survey of the State of the Art](https://aclanthology.org/2020.coling-main.331.pdf) (COLING): 2020
   - [A Brief Survey and Comparative Study of Recent Development of Pronoun Coreference Resolution](https://arxiv.org/abs/2009.12721) (arxiv): 2020
   - [A Neural Entity Coreference Resolution Review](https://arxiv.org/abs/1910.09329) (arxiv): 2019
+  - [Anaphora and coreference resolution: A review](https://www.sciencedirect.com/science/article/pii/S1566253519303677) (Information Fision): 2018
   
 ### What is it?
 
@@ -539,9 +539,34 @@ In this task, mention span may be named entity mention, pronoun, verb, etc.
 
 ### What are the challenges?
 
+- How to better represent mention span?
+- How to mitigate the number of enormous invalid mention spans?
+- How to model contextual representation?
+- How to distinguish pronoun coreference and entity coreference?
+
 ### Mainstream methods?
 
+![image](./figure/coreference-resolution-recent-advancements.png)
+
+- End to end
+  - mention-span pair-wise
+    - e2e-coref [End-to-end Neural Coreference Resolution](http://aclanthology.org/D17-1018.pdf) (EMNLP2017): span enumeration + mention pair-wise scoring (mention span score + antecedant mention span score + coreference score)
+    - c2f-coref [Higher-order Coreference Resolution with Coarse-to-fine Inference](https://aclanthology.org/N18-2108.pdf) (NAACL2018): high-order span representation + coarse-to-fine inference
+    - c2f-coref-BERT [BERT for Coreference Resolution: Baselines and Analysis](https://aclanthology.org/D19-1588/) (EMNLP2019): c2f-coref + BERT encoding
+    - coref-hoi-SpanBERT+cluster_mergeing [Revealing the Myth of Higher-Order Inference in Coreference Resolution](https://arxiv.org/pdf/2009.12013v2.pdf) (EMNLP2020): analysis the impact of high-order inference (HOI) and four HOI variants
+    - c2f-coref-EE [Coreference Resolution with Entity Equalization](https://aclanthology.org/2020.emnlp-main.686/) (EMNLP2020): use equalization approach represents each mention in a cluster via an approximation of the sum of all mentions in the cluster
+  - mention words pair-wise
+    - wl-coref [Word-Level Coreference Resolution](https://paperswithcode.com/paper/word-level-coreference-resolution): consider coreference links between individual words rather than word spans and then reconstruct the word spans
+  - Question Answering
+    - CorefQA [CorefQA: Coreference Resolution as Query-based Span Prediction](https://aclanthology.org/2020.acl-main.622/) (ACL2020): mention detection + use mention to query antecedant mention on inpu text
+
+
 ### Datasets?
+
+- OntoNotes5.0 (also called CoNLL 2012): [OntoNotes: A Large Training Corpus for Enhanced Processing](https://www.cs.cmu.edu/~hovy/papers/09OntoNotes-GALEbook.pdf): Manual Annotation  + Three Languages (English, Chinese, and Arabic)
+- GAP: [Mind the GAP: A Balanced Corpus of Gendered Ambiguous Pronouns](https://arxiv.org/abs/1810.05201v1): Towards Gender-balanced Coreference
+- DWIE: [DWIE: An Entity-centric Dataset for Multi-task Document-level Information Extraction](https://arxiv.org/pdf/2009.12626.pdf): joint IE including four task: Named Entity Recognition, Coreference Resolution, Relation Extraction, and  Entity Linking
+
 
 ## Others
 - Named Entity Recognition
