@@ -7,6 +7,40 @@ Contributor: [Runxin Xu](https://github.com/RunxinXu), [Shuang Zeng](https://git
 And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.com/Yifan-Song793) for their suggestions!
 
 
+## Named Entity Recognition
+
+- Survey
+  - [A Survey on Deep Learning for Named Entity Recognition](https://ieeexplore.ieee.org/document/9039685) (TKDE2020): 2020
+  - [A Survey on Recent Advances in Named Entity Recognition from Deep Learning models](https://aclanthology.org/C18-1182/) (COLING2018): 2018
+  - [A survey of named entity recognition and classification](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf) (NYU): 2017
+
+### Supervised Sentence-level Named Entity Recognition
+
+#### What is it?
+#### What are the challenges?
+#### Mainstream methods?
+#### Datasets?
+
+### Chinese Named Entity Recognition
+
+#### What is it?
+#### What are the challenges?
+#### Mainstream methods?
+#### Datasets?
+
+### Few-shot Named Entity Recognition
+
+#### What is it?
+#### What are the challenges?
+#### Mainstream methods?
+#### Datasets?
+
+### Document-level Named Entity Recognition
+
+#### What is it?
+#### What are the challenges?
+#### Mainstream methods?
+#### Datasets?
 ## Relation Extraction
 
 - Survey
