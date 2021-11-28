@@ -39,8 +39,38 @@ And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.
 
 #### What is it?
 #### What are the challenges?
+
+- How to better utilize the document-level context?
+- How to maintain the consistency of entities occurring multiple times across the document?
+
 #### Mainstream methods?
+
+- Global Attention
+  - [An attention-based BiLSTM-CRF approach to document-level chemical named entity recognition](https://pubmed.ncbi.nlm.nih.gov/29186323/) (Bioinformatics 2018): 每个句子各自encode，但是每个单词有一个attend整个document的word做一个aggregation的document-level特征
+  - [Improving Clinical Named Entity Recognition with Global Neural Attention](https://link.springer.com/chapter/10.1007/978-3-319-96893-3_20) (APWeb2018)
+  - [Global Attention for Name Tagging](https://aclanthology.org/K18-1009/) (CoNLL2018): 每个sentence各自encode，每个单词attend跟他一样的其他位置的词
+  - [Leveraging Multi-Token Entities in Document-Level Named Entity Recognition](https://ojs.aaai.org/index.php/AAAI/article/view/6304) (AAAI2020): 引入对multi-token的entity更多地关注
+  - [Named Entity Recognition in Multi-level Contexts](https://aclanthology.org/2020.aacl-main.22/) (AACL2020)
+- Graph
+  - [GraphIE: A Graph-Based Framework for Information Extraction](https://aclanthology.org/N19-1082/) (NAACL2019): 引入word-level graph + sentence-level graph，使用图神经网络
+  - [Exploiting Global Contextual Information for Document-level Named Entity Recognition](https://arxiv.org/abs/2106.00887) (arXiv): 每个节点是一个word，相同word会有相应的边，使用图神经网络
+- Global-level Memory
+  - [Pooled Contextualized Embeddings for Named Entity Recognition](https://aclanthology.org/N19-1078/) (NAACL2019): 用memory维护word的global的表示
+  - [Hierarchical Contextualized Representation for Named Entity Recognition](https://arxiv.org/abs/1911.02257) (AAAI2020): sentence-level representation + 基于memory的document-level representation
+  - [Leveraging Document-Level Label Consistency for Named Entity Recognition](https://www.ijcai.org/proceedings/2020/550) (IJCAI2020): 先粗糙句子级别预测每个句子，然后利用整个document各个句子的初步结果使用一个uncertainty+memory的机制进行refine得到最终结果
+- Concatenate (left and right) Context
+  - [Fast and Accurate Entity Recognition with Iterated Dilated Convolutions](https://aclanthology.org/D17-1283/) (EMNLP2017): sentences concat起来迭代地stack dilated CNN
+  - [FLERT: Document-Level Features for Named Entity Recognition](https://arxiv.org/abs/2011.06993) (arXiv)
+  - [Multilingual is not enough: BERT for Finnish](https://arxiv.org/abs/1912.07076) (arXiv)
+  - [Exploring Cross-sentence Contexts for Named Entity Recognition with BERT](https://aclanthology.org/2020.coling-main.78/) (CoNLL2020)
+  - [A Frustratingly Easy Approach for Entity and Relation Extraction](https://aclanthology.org/2021.naacl-main.5/) (NAACL2021)
+
 #### Datasets?
+
+- CoNLL2003: [Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition](https://aclanthology.org/W03-0419/)
+- OntoNotes 5.0: [Website](https://catalog.ldc.upenn.edu/LDC2013T19)
+- CHEMDNER: [CHEMDNER: The drugs and chemical names extraction challenge](https://jcheminf.biomedcentral.com/articles/10.1186/1758-2946-7-S1-S1)
+
 ## Relation Extraction
 
 - Survey
