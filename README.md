@@ -31,8 +31,34 @@ Content
 
 #### What is it?
 #### What are the challenges?
+
+- How to better utilize the character-word lattice structure to enhance Chinese NER?
+- How to accelerate the model so that we can fully utilize the parallel computation of GPUs with a high inference speed?
+
 #### Mainstream methods?
+
+- Model Architecture
+  - [Chinese NER Using Lattice LSTM](https://aclanthology.org/P18-1144/) (ACL2018): Lattice LSTM
+  - [CNN-Based Chinese NER with Lexicon Rethinking](https://www.ijcai.org/proceedings/2019/692) (IJCAI2019): CNN + n-gram金字塔
+  - [Leverage Lexical Knowledge for Chinese Named Entity Recognition via Collaborative Graph Network](https://aclanthology.org/D19-1396/) (EMNLP2019): Graph
+  - [A Lexicon-Based Graph Neural Network for Chinese NER](https://aclanthology.org/D19-1096/) (EMNLP2019): Graph
+  - [Porous Lattice Transformer Encoder for Chinese NER](https://aclanthology.org/2020.coling-main.340/) (COLING2020): 改进attention
+  - [FLAT: Chinese NER Using Flat-Lattice Transformer](https://aclanthology.org/2020.acl-main.611/) 
+  (ACL2020): flat structure
+  - [Entity Enhanced BERT Pre-training for Chinese NER](https://aclanthology.org/2020.emnlp-main.518/) (EMNLP2020): 利用entity信息
+  - [Lattice-BERT: Leveraging Multi-Granularity Representations in Chinese Pre-trained Language Models](https://aclanthology.org/2021.naacl-main.137/) (NAACL2021): 多粒度的针对中文NER的BERT预训练
+- Enhanced Embedding
+  - [An Encoding Strategy Based Word-Character LSTM for Chinese NER](https://aclanthology.org/N19-1247/) (NAACL2019): 除了character embedding之外还引入对应的word embedding
+  - [A Neural Multi-digraph Model for Chinese NER with Gazetteers](https://aclanthology.org/P19-1141/) (ACL2019): 引入外部entity词典信息
+  - [Simplify the Usage of Lexicon in Chinese NER](https://aclanthology.org/2020.acl-main.528/) (ACL2020)
+
 #### Datasets?
+
+- Ontonotes 4.0: [Website](https://catalog.ldc.upenn.edu/LDC2013T19)
+- MSRA: [The Third International Chinese Language Processing Bakeoff: Word Segmentation and Named Entity Recognition](https://aclanthology.org/W06-0115/)
+- Resume: [Chinese NER Using Lattice LSTM](https://aclanthology.org/P18-1144/)
+- Weibo: [Named Entity Recognition for Chinese Social Media with Jointly Trained Embeddings](https://aclanthology.org/D15-1064/)
+- CLUENER-2020: [CLUENER2020: Fine-grained Named Entity Recognition Dataset and Benchmark for Chinese](https://arxiv.org/abs/2001.04351)
 
 ### Few-shot Named Entity Recognition
 
