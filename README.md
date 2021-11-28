@@ -32,8 +32,36 @@ And thank [Yuxuan Fan](https://github.com/feiba54), [Yifan Song](https://github.
 
 #### What is it?
 #### What are the challenges?
+
+- How to precisely capture the characteristics of different entity types given few training data?
+- How to handle the imbalance of entity types (the domination of *O* class)?
+
 #### Mainstream methods?
+
+- Meta-learning
+  - Prototype Network
+    - [Few-shot Slot Tagging with Collapsed Dependency Transfer and Label-enhanced Task-adaptive Projection Network](https://aclanthology.org/2020.acl-main.128/) (ACL2020): TapNet + Collapsed Dependency Transfer + Label Information
+    - [Simple and Effective Few-Shot Named Entity Recognition with Structured Nearest Neighbor Learning](https://aclanthology.org/2020.emnlp-main.516/) (EMNLP2020): Collapsed Dependency Transfer + Nearset Neighbor
+    - [Few-Shot Named Entity Recognition A Comprehensive Study](https://arxiv.org/abs/2012.14978) (arXiv): 针对entity的pre-training + self training
+    - [Few-shot Intent Classification and Slot Filling with Retrieved Examples](https://aclanthology.org/2021.naacl-main.59/) (NAACL2021): Span-based
+    - [An Enhanced Span-based Decomposition Method for Few-Shot Sequence Labeling](https://arxiv.org/abs/2109.13023) (arXiv): span-based + 各类attention + 对O类细分
+    - [CONTaiNER: Few-Shot Named Entity Recognition via Contrastive Learning](https://arxiv.org/abs/2109.07589) (arXiv): 更复杂的距离计算函数
+    - [Learning from Language Description: Low-shot Named Entity Recognition via Decomposed Framework](https://aclanthology.org/2021.findings-emnlp.139/) (EMNLP2021 findings): 对O类细分
+  - MAML
+    - [Few-Shot Named Entity Recognition via Meta-Learning](https://ieeexplore.ieee.org/document/9262018) (TKDE2020)
+- Transfer Learning
+  - [Augmented Natural Language for Generative Sequence Labeling](https://aclanthology.org/2020.emnlp-main.27/) (EMNLP2020): reformulate成Seq2Seq的方式
+  - [Frustratingly simple few-shot slot tagging](https://aclanthology.org/2021.findings-acl.88/) (ACL2021 findings): reformulate成MRC的方式
+  - [ConVEx Data-Efficient and Few-Shot Slot Labeling](https://aclanthology.org/2021.naacl-main.264/) (NAACL2021): 在额外reddit语料上做预训练
+  - [Template-Based Named Entity Recognition Using BART](https://aclanthology.org/2021.findings-acl.161/) (ACL2021 findings): 使用template的方式遍历所有可能span和可能的entity type
+  - [Template-free Prompt Tuning for Few-shot NER](https://arxiv.org/abs/2109.13532) (arXiv): 对前面template-based需要enumerate all spans的改进
+  - [LightNER: A Lightweight Generative Framework with Prompt-guided Attention for Low-resource NER](https://arxiv.org/abs/2109.00720) (arXiv): BART + prompt
+
 #### Datasets?
+
+- SNIPS: [Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design voice interfaces](https://arxiv.org/abs/1805.10190)
+- Few-NERD: [Few-NERD: A Few-shot Named Entity Recognition Dataset](https://aclanthology.org/2021.acl-long.248/)
+
 
 ### Document-level Named Entity Recognition
 
