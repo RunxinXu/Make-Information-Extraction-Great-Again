@@ -24,8 +24,54 @@ Content
 
 #### What is it?
 #### What are the challenges?
+
+- How to handle the nested entities?
+- How to handle the discontinuous entities?
+
 #### Mainstream methods?
+
+- Sequence Labeling
+  - [End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF](https://aclanthology.org/P16-1101/) (ACL2016)
+  - [A Neural Layered Model for Nested Named Entity Recognition](https://aclanthology.org/N18-1131/) (NAACL2018): stack多层来从内到外识别实体
+  - [Sequence-to-Nuggets: Nested Entity Mention Detection via Anchor-Region Networks](https://aclanthology.org/P19-1511/) (ACL2019): 先找anchor word再向两边扩展
+  - [TENER: Adapting Transformer Encoder for Named Entity Recognition](https://arxiv.org/abs/1911.04474) (arXiv): 改进position embedding
+  - [Nested Named Entity Recognition with Partially-Observed TreeCRFs](https://www.aaai.org/AAAI21Papers/AAAI-6725.FuY.pdf) (AAAI2021): TreeCRF
+- Span-level
+  - [A Local Detection Approach for Named Entity Recognition and Mention Detection](https://aclanthology.org/P17-1114/) (ACL2017)
+  - [A Boundary-aware Neural Model for Nested Named Entity Recognition](https://aclanthology.org/D19-1034/) (EMNLP2019): 先判断哪些token可以作为entity的开头结尾，然后遍历判断所有potential spans
+  - [Multi-Grained Named Entity Recognition](https://aclanthology.org/P19-1138/) (ACL2019): word-level+sentence-level特征先找possible spans再分类
+  - [Named Entity Recognition as Dependency Parsing](https://aclanthology.org/2020.acl-main.577/) (ACL2020)
+  - [Pyramid: A Layered Model for Nested Named Entity Recognition](https://aclanthology.org/2020.acl-main.525/) (ACL2020): Pyramid
+  - [Boundary Enhanced Neural Span Classification for Nested Named Entity Recognition](https://ojs.aaai.org/index.php/AAAI/article/view/6434) (AAAI2020): 同时分类boundary label和span label
+  - [SpanNER: Named Entity Re-/Recognition as Span Prediction](https://aclanthology.org/2021.acl-long.558/) (ACL2021)
+- Hypergraph-based
+  - [Joint Mention Extraction and Classification with Mention Hypergraphs](https://aclanthology.org/D15-1102/) (EMNLP2015)
+  - [Nested Named Entity Recognition Revisited](https://aclanthology.org/N18-1079/) (NAACL2018): 将序列构建成一个hypergraph
+  - [Neural Segmental Hypergraphs for Overlapping Mention Recognition](https://aclanthology.org/D18-1019/) (EMNLP2018): hypergraph-based
+- MRC
+  - [A Unified MRC Framework for Named Entity Recognition](https://aclanthology.org/2020.acl-main.519/) (ACL2020)
+  - [Coarse-to-Fine Pre-training for Named Entity Recognition](https://aclanthology.org/2020.emnlp-main.514/) (EMNLP2020): 基于MRC-NER框架做pre-trainning
+- Transition-based
+  - [A Neural Transition-based Model for Nested Mention Recognition](https://aclanthology.org/D18-1124/) (EMNLP2018)
+  - [An Effective Transition-based Model for Discontinuous NER](https://aclanthology.org/2020.acl-main.520/) (ACL2020): seq2seq
+- Sequence to Sequence
+  - [Learning to Progressively Recognize New Name](https://aclanthology.org/C18-1185/) (COLING2018)
+  - [SC-NER: A Sequence-to-Sequence Model with Sentence Classification for Named Entity Recognition](https://link.springer.com/chapter/10.1007%2F978-3-030-16148-4_16) (PAKDD2019)
+  - [Neural Architectures for Nested NER through Linearization](https://aclanthology.org/P19-1527/) (ACL2019)
+  - [A Unified Generative Framework for Various NER Subtasks](https://aclanthology.org/2021.acl-long.451/) (ACL2021)
 #### Datasets?
+
+- CoNLL-2002: [Introduction to the CoNLL-2002 Shared Task: Language-Independent Named Entity Recognition](https://aclanthology.org/W02-2024/)
+- CoNLL-2003: [Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition](https://aclanthology.org/W03-0419/)
+- OntoNotes: [Towards Robust Linguistic Analysis using OntoNotes](https://aclanthology.org/W13-3516/)
+- ACE04: [Website](http://www.lrec-conf.org/proceedings/lrec2004/summaries/5.htm)
+- ACE05: [Website](https://books.google.com/books?id=SbjjuQEACAAJ)
+- WNUT-2016: [Results of the WNUT16 Named Entity Recognition Shared Task](https://aclanthology.org/W16-3919/)
+- WNUT-2017: [Results of the WNUT2017 Shared Task on Novel and Emerging Entity Recognition](https://aclanthology.org/W17-4418/)
+- Genia: [GENIA Corpus - A Semantically Annotated Corpus For Bio-textmining](https://academic.oup.com/bioinformatics/article/19/suppl_1/i180/227927)
+- CADEC: [Cadec: A corpus of adverse drug event annotations](https://www.sciencedirect.com/science/article/pii/S1532046415000532?via%3Dihub)
+- ShARe13: [Task 1: ShARe/CLEF eHealth Evaluation Lab 2013](http://ceur-ws.org/Vol-1179/CLEF2013wn-CLEFeHealth-PradhanEt2013.pdf)
+- ShARe14: [Task 2: ShARe/CLEF eHealth Evaluation Lab 2014](http://ceur-ws.org/Vol-1180/CLEF2014wn-eHealth-MoweryEt2014.pdf)
 
 ### Chinese Named Entity Recognition
 
