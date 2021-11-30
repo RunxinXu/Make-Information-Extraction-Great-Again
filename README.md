@@ -15,6 +15,11 @@ Content
 
 ## Named Entity Recognition
 
+* [Supervised Sentence-level Named Entity Recognition](#supervised-sentence-level-named-entity-recognition)
+* [Chinese Named Entity Recognition](#chinese-named-entity-recognition)
+* [Few-shot Named Entity Recognition](#few-shot-named-entity-recognition)
+* [Document-level Named Entity Recognition](#document-level-named-entity-recognition)
+
 - Survey
   - [A Survey on Deep Learning for Named Entity Recognition](https://ieeexplore.ieee.org/document/9039685) (TKDE2020): 2020
   - [A Survey on Recent Advances in Named Entity Recognition from Deep Learning models](https://aclanthology.org/C18-1182/) (COLING2018): 2018
@@ -65,6 +70,7 @@ For example, *Alpha* is an *Protein* type entity in the figure.
   - [SC-NER: A Sequence-to-Sequence Model with Sentence Classification for Named Entity Recognition](https://link.springer.com/chapter/10.1007%2F978-3-030-16148-4_16) (PAKDD2019)
   - [Neural Architectures for Nested NER through Linearization](https://aclanthology.org/P19-1527/) (ACL2019)
   - [A Unified Generative Framework for Various NER Subtasks](https://aclanthology.org/2021.acl-long.451/) (ACL2021)
+
 #### Datasets?
 
 - CoNLL-2002: [Introduction to the CoNLL-2002 Shared Task: Language-Independent Named Entity Recognition](https://aclanthology.org/W02-2024/)
@@ -157,7 +163,6 @@ The few-shot NER problem is usually modeled as a N-way-K-shot task following tra
 - SNIPS: [Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design voice interfaces](https://arxiv.org/abs/1805.10190)
 - Few-NERD: [Few-NERD: A Few-shot Named Entity Recognition Dataset](https://aclanthology.org/2021.acl-long.248/)
 
-
 ### Document-level Named Entity Recognition
 
 #### What is it?
@@ -231,6 +236,9 @@ In this task, mention span may be named entity mention, pronoun, verb, etc.
 
 ![image](./figure/coreference-resolution-recent-advancements.png)
 
+* [Entity Mention Resolution](#entity-mention-resolution)
+* [Pronoun Resolution](#pronoun-resolution)
+
 #### Entity Mention Resolution
 - mention span pair-wise
   - [Understanding the value of features for coreference resolution](https://aclanthology.org/D08-1031.pdf) (EMNLP2008): first neural mention pair model with average perceptron model, focusing on advanced feature selection
@@ -275,6 +283,11 @@ In this task, mention span may be named entity mention, pronoun, verb, etc.
   benchmark
 
 ## Relation Extraction
+
+* [Supervised Sentence-level Relation Extraction](#supervised-sentence-level-relation-extraction)
+* [Distant Supervised Relation Extraction](#distant-supervised-relation-extraction)
+* [Few-shot Relation Extraction](#few-shot-relation-extraction)
+* [Document-level Relation Extraction](#document-level-relation-extraction)
 
 - Survey
   - [Deep Neural Approaches to Relation Triplets Extraction: A Comprehensive Survey](https://arxiv.org/abs/2103.16929) (arXiv): 2021
@@ -501,10 +514,17 @@ Given a document that consists of multiple sentences, the task aims at extractin
 
 ## Event Extraction
 
+* [Supervised Sentence-level Event Extraction](#supervised-sentence-level-event-extraction)
+* [Distant-supervised Event Extraction](#distant-supervised-event-extraction)
+* [Few-shot Event Extraction](#few-shot-event-extraction)
+* [Document-level Event Extraction](#document-level-event-extraction)
+* [Relations Among Events](#relations-among-events)
+
 - Survey
   - [An overview of event extraction and its applications](https://arxiv.org/abs/2111.03212) (arXiv): 2021
   - [A Comprehensive Survey on Schema-based Event Extraction with Deep Learning](https://arxiv.org/abs/2107.02126) (arXiv): 2021
   - [Extracting Events and Their Relations from Texts: A Survey on Recent Research Progress and Challenges](https://www.sciencedirect.com/science/article/pii/S266665102100005X) (AI Open): 2020
+
 ### Supervised Sentence-level Event Extraction
 
 #### What is it?
@@ -574,6 +594,7 @@ Given a sentence, the task aims at handling four sub-tasks:
 - TAC KBP 2015: [Website](https://tac.nist.gov//2015/KBP/Event/index.html)
 - BioNLP Genia 2011: [Overview of Genia Event Task in BioNLP Shared Task 2011](https://aclanthology.org/W11-1802/)
 - MAVEN: [MAVEN: A Massive General Domain Event Detection Dataset](https://aclanthology.org/2020.emnlp-main.129/)
+
 ### Distant-supervised Event Extraction
 
 #### What is it?
@@ -715,13 +736,17 @@ nthology.org/Q14-1022/)
 
 ## Joint Information Extraction
 
+* []
+
+- surveys
+  - todos
+
 #### What is it?
 
 ![image](./figure/joint-ie.png)
 
 Joint Information Extraction aims at handling multiple extraction tasks simultaneously, including named entity recognition, relation extraction, event extraction, and etc.
 As illustrated in the figure, the entities are recognized, with the relation triples (man, ART, taxicab), (man, PHYS, checkpoint), (soldiers, PHYS, checkpoint) and the *Transport* events with *Artifact* and *Destination* arguments.
-
 
 #### What are the challenges?
 
@@ -741,6 +766,8 @@ As illustrated in the figure, the entities are recognized, with the relation tri
 
 - Sequence to Sequence
   - [Structured Prediction as Translation between Augmented Natural Languages](https://openreview.net/forum?id=US-TP-xnXI) (ICLR2021)
+  
+  
 #### Datasets?
 
 - ACE05: [Website](https://catalog.ldc.upenn.edu/LDC2006T06): manual-annotated, 包括英语/中文/阿拉伯语三种语言
@@ -748,9 +775,7 @@ As illustrated in the figure, the entities are recognized, with the relation tri
 - Rich ERE: [From Light to Rich ERE: Annotation of Entities, Relations, and Events](https://aclanthology.org/W15-0812/)
 - DWIE: [DWIE: An Entity-centric Dataset for Multi-task Document-level Information Extraction](https://arxiv.org/pdf/2009.12626.pdf)
 
-
 ## Others
-- Named Entity Recognition
 - Open-domain Information Extraction
 - Type/Schema Induction
 - ...
