@@ -23,6 +23,12 @@ Content
 ### Supervised Sentence-level Named Entity Recognition
 
 #### What is it?
+
+![image](./figure/supervised-sentence-level-ner.png)
+
+Given a sentence, the task aims at recognizing the entities and their entity types in the sentence. 
+For example, *Alpha* is an *Protein* type entity in the figure.
+
 #### What are the challenges?
 
 - How to handle the nested entities?
@@ -76,6 +82,11 @@ Content
 ### Chinese Named Entity Recognition
 
 #### What is it?
+
+![img](./figure/chinese-ner.png)
+
+Different from English sentence, Chinese sentence features different sttructure of characters and words, and does not has explicity word boundary, which makes it more challenging.
+
 #### What are the challenges?
 
 - How to better utilize the character-word lattice structure to enhance Chinese NER?
@@ -109,6 +120,12 @@ Content
 ### Few-shot Named Entity Recognition
 
 #### What is it?
+
+![img](./figure/few-shot-ner.png)
+
+The few-shot NER problem is usually modeled as a N-way-K-shot task following traditional meta-learning paradigm. 
+
+
 #### What are the challenges?
 
 - How to precisely capture the characteristics of different entity types given few training data?
@@ -144,6 +161,11 @@ Content
 ### Document-level Named Entity Recognition
 
 #### What is it?
+
+![img](./figure/document-level-ner.png)
+
+Given a document that consists of multiple sentences, document-level NER aims at recognizing entities in the whole document. 
+
 #### What are the challenges?
 
 - How to better utilize the document-level context?
@@ -363,6 +385,7 @@ Relation Extraction](https://aclanthology.org/P18-1046/) (ACL2018): 使用GAN来
 #### What is it?
 
 ![image](./figure/few-shot-re.png)
+
 The few-shot RE problem is usually modeled as a N-way-K-shot task following traditional meta-learning paradigm.
 Given N relation types with K instances, the task aims at predicting which relation type the query (test) instance belongs to.
 #### What are the challenges?
