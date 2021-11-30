@@ -246,8 +246,13 @@ In this task, mention span may be named entity mention, pronoun, verb, etc.
 ### Datasets?
 
 - OntoNotes5.0 (also called CoNLL 2012): [OntoNotes: A Large Training Corpus for Enhanced Processing](https://www.cs.cmu.edu/~hovy/papers/09OntoNotes-GALEbook.pdf): Manual Annotation  + Three Languages (English, Chinese, and Arabic)
-- GAP: [Mind the GAP: A Balanced Corpus of Gendered Ambiguous Pronouns](https://arxiv.org/abs/1810.05201v1): Towards Gender-balanced Coreference
+- Mind the GAP: [Mind the GAP: A Balanced Corpus of Gendered Ambiguous Pronouns](https://arxiv.org/abs/1810.05201v1): Towards Gender-balanced Coreference, Kaggle’s Gender Pronoun Resolution competition
 - DWIE: [DWIE: An Entity-centric Dataset for Multi-task Document-level Information Extraction](https://arxiv.org/pdf/2009.12626.pdf): joint IE including four task: Named Entity Recognition, Coreference Resolution, Relation Extraction, and  Entity Linking
+- ParCor: [ParCor 1.0: A parallel pronoun-coreference corpus to support statistical MT](https://aclanthology.org/L14-1268/) (LREC2014): 
+- CIC: [Character identification on multiparty conversation: Identifying mentions of characters in tv shows](https://aclanthology.org/W16-3612/) (ACL2016): CR on ChatBots
+- WikiCoref: [Wikicoref: An english coreference-annotated corpus of wikipedia articles](https://aclanthology.org/L16-1021/) (LREC2016): unrestricted Coreference Resolution corpus with more types of coreference
+- LitBank: [An annotated dataset of coreference in english literature](https://aclanthology.org/2020.lrec-1.6/) (LREC2020): cross-domain and long-distance coreference performance
+  benchmark
 
 ## Relation Extraction
 
