@@ -231,32 +231,37 @@ In this task, mention span may be named entity mention, pronoun, verb, etc.
 
 ![image](./figure/coreference-resolution-recent-advancements.png)
 
-- End to end
-  - mention span pair-wise
-    - [Understanding the value of features for coreference resolution](https://aclanthology.org/D08-1031.pdf) (EMNLP2008): first neural mention pair model with average perceptron model, focusing on advanced feature selection
-  - mention word pair-wise
-    - wl-coref [Word-Level Coreference Resolution](https://paperswithcode.com/paper/word-level-coreference-resolution): consider coreference links between individual words rather than word spans and then reconstruct the word spans
-  - mention-antecedant ranking
-    - [Learning anaphoricity and antecedent ranking features for coreference resolution](https://aclanthology.org/P15-1137/) (ACL2015): an adaption of the piece-wise scoring function via a feed-forward function
-    - e2e-coref [End-to-end Neural Coreference Resolution](http://aclanthology.org/D17-1018.pdf) (EMNLP2017): span enumeration + mention pair-wise scoring (mention span score + antecedant mention span score + coreference score)
-    - [Neural coreference resolution with deep biaffine attention by joint mention detection and mention clustering](https://arxiv.org/abs/1805.04893) (ACL2018): (1) using a biaffine attention model to get antecedent scores for each possible mention, and (2) jointly optimizing the mention detection accuracy and the mention clustering log-likelihood given the mention cluster labels
-    - c2f-coref [Higher-order Coreference Resolution with Coarse-to-fine Inference](https://aclanthology.org/N18-2108.pdf) (NAACL2018): high-order span representation + coarse-to-fine inference
-    - c2f-coref-BERT [BERT for Coreference Resolution: Baselines and Analysis](https://aclanthology.org/D19-1588/) (EMNLP2019): c2f-coref + BERT encoding
-    - coref-hoi-SpanBERT+cluster_mergeing [Revealing the Myth of Higher-Order Inference in Coreference Resolution](https://arxiv.org/pdf/2009.12013v2.pdf) (EMNLP2020): analysis the impact of high-order inference (HOI) and four HOI variants
-    - c2f-coref-EE [Coreference Resolution with Entity Equalization](https://aclanthology.org/2020.emnlp-main.686/) (EMNLP2020): use equalization approach represents each mention in a cluster via an approximation of the sum of all mentions in the cluster
-  - graph neural network
-    - [Improving coreference resolution by leveraging entity-centric features with graph neural networks and second-order inference](https://arxiv.org/abs/2009.04639) (ArXiv2020): use graphs to model entities + GNN
-  - question answering
-    - CorefQA [CorefQA: Coreference Resolution as Query-based Span Prediction](https://aclanthology.org/2020.acl-main.622/) (ACL2020): mention detection + use mention to query antecedant mention on inpu text
-  - cluster based
-    - [Learning global features for coreference resolution](https://aclanthology.org/N16-1114/) (NAACL2016): global scoring function between the cluster assigned to each possible antecedent and the mention + local scoring function of the mention and each possible antecedent
-    - [Improving coreference resolution by learning entity-level distributed representations](https://aclanthology.org/P16-1061/) (ACL2016):  define each mention as a single entity cluster and combine them during inference
-  - Latent-Structure models
-    - c2f-coref [Higher-order Coreference Resolution with Coarse-to-fine Inference](https://aclanthology.org/N18-2108.pdf) (NAACL2018): high-order span representation + coarse-to-fine inference
-  - others  
-    - [Improving generalization in coreference resolution via adversarial training](https://aclanthology.org/S19-1021/) (SEM2019): use adversarial gradient-based training to retrain e2e-coref
-    - [Rewarding coreference resolvers for being consistent with world knowledge](https://aclanthology.org/D19-1118v2.pdf) (EMNLP2019): makes use of Relation Extraction systems and the “distill” multi-task reinforcement learning technique to fuse world knowledge into CR
+#### Entity Mention Resolution
+- mention span pair-wise
+  - [Understanding the value of features for coreference resolution](https://aclanthology.org/D08-1031.pdf) (EMNLP2008): first neural mention pair model with average perceptron model, focusing on advanced feature selection
+- mention word pair-wise
+  - wl-coref [Word-Level Coreference Resolution](https://paperswithcode.com/paper/word-level-coreference-resolution): consider coreference links between individual words rather than word spans and then reconstruct the word spans
+- mention-antecedant ranking
+  - [Learning anaphoricity and antecedent ranking features for coreference resolution](https://aclanthology.org/P15-1137/) (ACL2015): an adaption of the piece-wise scoring function via a feed-forward function
+  - e2e-coref [End-to-end Neural Coreference Resolution](http://aclanthology.org/D17-1018.pdf) (EMNLP2017): span enumeration + mention pair-wise scoring (mention span score + antecedant mention span score + coreference score)
+  - [Neural coreference resolution with deep biaffine attention by joint mention detection and mention clustering](https://arxiv.org/abs/1805.04893) (ACL2018): (1) using a biaffine attention model to get antecedent scores for each possible mention, and (2) jointly optimizing the mention detection accuracy and the mention clustering log-likelihood given the mention cluster labels
+  - c2f-coref [Higher-order Coreference Resolution with Coarse-to-fine Inference](https://aclanthology.org/N18-2108.pdf) (NAACL2018): high-order span representation + coarse-to-fine inference
+  - c2f-coref-BERT [BERT for Coreference Resolution: Baselines and Analysis](https://aclanthology.org/D19-1588/) (EMNLP2019): c2f-coref + BERT encoding
+  - coref-hoi-SpanBERT+cluster_mergeing [Revealing the Myth of Higher-Order Inference in Coreference Resolution](https://arxiv.org/pdf/2009.12013v2.pdf) (EMNLP2020): analysis the impact of high-order inference (HOI) and four HOI variants
+  - c2f-coref-EE [Coreference Resolution with Entity Equalization](https://aclanthology.org/2020.emnlp-main.686/) (EMNLP2020): use equalization approach represents each mention in a cluster via an approximation of the sum of all mentions in the cluster
+- graph neural network
+  - [Improving coreference resolution by leveraging entity-centric features with graph neural networks and second-order inference](https://arxiv.org/abs/2009.04639) (ArXiv2020): use graphs to model entities + GNN
+- question answering
+  - CorefQA [CorefQA: Coreference Resolution as Query-based Span Prediction](https://aclanthology.org/2020.acl-main.622/) (ACL2020): mention detection + use mention to query antecedant mention on inpu text
+- cluster based
+  - [Learning global features for coreference resolution](https://aclanthology.org/N16-1114/) (NAACL2016): global scoring function between the cluster assigned to each possible antecedent and the mention + local scoring function of the mention and each possible antecedent
+  - [Improving coreference resolution by learning entity-level distributed representations](https://aclanthology.org/P16-1061/) (ACL2016):  define each mention as a single entity cluster and combine them during inference
+- Latent-Structure models
+  - c2f-coref [Higher-order Coreference Resolution with Coarse-to-fine Inference](https://aclanthology.org/N18-2108.pdf) (NAACL2018): high-order span representation + coarse-to-fine inference
+- others  
+  - [Improving generalization in coreference resolution via adversarial training](https://aclanthology.org/S19-1021/) (SEM2019): use adversarial gradient-based training to retrain e2e-coref
+  - [Rewarding coreference resolvers for being consistent with world knowledge](https://aclanthology.org/D19-1118v2.pdf) (EMNLP2019): makes use of Relation Extraction systems and the “distill” multi-task reinforcement learning technique to fuse world knowledge into CR
 
+#### Pronoun Resolution
+- [Incorporating context and external knowledge for pronoun coreference resolution](https://aclanthology.org/N19-1093/) (NAACL2019): incorporate contextual information and external knowledge to represent pronominal expression
+- [Knowledge-aware pronoun coreference resolution](https://aclanthology.org/P19-1083/) (ACL2019): leverage different types of knowledge in the format of triplet to better resolve pronoun coreference with a neural model
+- [Resolving gendered ambiguous pronouns with BERT](https://aclanthology.org/W19-3817.pdf) (ACL2019): BERT-based approach to solving the problem of gender-balanced pronoun resolution
+- [Look again at the syntax: Relational graph convolutional network for gendered ambiguous pronoun resolution](https://aclanthology.org/W19-3814/) (ACL2019): BERT + RGCN on dependency graph
 
 ### Datasets?
 
