@@ -20,7 +20,7 @@ Content
   - [A Survey on Recent Advances in Named Entity Recognition from Deep Learning models](https://aclanthology.org/C18-1182/) (COLING2018): 2018
   - [A survey of named entity recognition and classification](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf) (NYU): 2017
 
-### Supervised Sentence-level Named Entity Recognition
+### Sentence-level Named Entity Recognition
 
 #### What is it?
 
@@ -262,7 +262,7 @@ In this task, mention span may be named entity mention, pronoun, verb, etc.
   - [A Review of Relation Extraction](https://www.cs.cmu.edu/~nbach/papers/A-survey-on-Relation-Extraction.pdf) (Literature review for Language and Statistics II): 2007
   - [Kernel methods for relation extraction](https://www.jmlr.org/papers/volume3/zelenko03a/zelenko03a.pdf) (JMLR): 2003
 
-### Supervised Sentence-level Relation Extraction
+### Sentence-level Relation Extraction
 
 #### What is it?
 
@@ -480,7 +480,7 @@ Given a document that consists of multiple sentences, the task aims at extractin
   - [An overview of event extraction and its applications](https://arxiv.org/abs/2111.03212) (arXiv): 2021
   - [A Comprehensive Survey on Schema-based Event Extraction with Deep Learning](https://arxiv.org/abs/2107.02126) (arXiv): 2021
   - [Extracting Events and Their Relations from Texts: A Survey on Recent Research Progress and Challenges](https://www.sciencedirect.com/science/article/pii/S266665102100005X) (AI Open): 2020
-### Supervised Sentence-level Event Extraction
+### Sentence-level Event Extraction
 
 #### What is it?
 
@@ -549,7 +549,7 @@ Given a sentence, the task aims at handling four sub-tasks:
 - TAC KBP 2015: [Website](https://tac.nist.gov//2015/KBP/Event/index.html)
 - BioNLP Genia 2011: [Overview of Genia Event Task in BioNLP Shared Task 2011](https://aclanthology.org/W11-1802/)
 - MAVEN: [MAVEN: A Massive General Domain Event Detection Dataset](https://aclanthology.org/2020.emnlp-main.129/)
-### Distant-supervised Event Extraction
+### Distant Supervised Event Extraction
 
 #### What is it?
 
