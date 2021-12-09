@@ -540,6 +540,7 @@ Given a sentence, the task aims at handling four sub-tasks:
 #### What are the challenges?
 
 - How to better understand the semantics of the sentence?
+- How to deal with the error propagation problems?
 - How to capture the dependency and interaction between different events?
 - How to capture the dependency and interaction between different arguments of the same event?
 #### Mainstream methods?
@@ -608,10 +609,15 @@ As illustrated in the figure, we annotate the sentence from Wikipedia with the k
 
 #### Mainstream methods?
 
-- [Automatically Labeled Data Generation for Large Scale Event Extraction](https://aclanthology.org/P17-1038/) (ACL2017)
-- [Scale Up Event Extraction Learning via Automatic Training Data Generation](https://arxiv.org/abs/1712.03665) (AAAI2018)
+
 
 #### Datasets?
+
+- [Event Extraction Using Distant Supervision](https://aclanthology.org/L14-1091/) (LREC2014)
+- [Automatically Labeled Data Generation for Large Scale Event Extraction](https://aclanthology.org/P17-1038/) (ACL2017)
+- [Scale Up Event Extraction Learning via Automatic Training Data Generation](https://arxiv.org/abs/1712.03665) (AAAI2018)
+- [KnowDis: Knowledge Enhanced Data Augmentation for Event Causality Detection via Distant Supervision](https://aclanthology.org/2020.coling-main.135/) (COLING2020)
+- [Automatic Labeling of Tweets for Crisis Response Using Distant Supervision](https://dl.acm.org/doi/10.1145/3366424.3383757) (WWW2020)
 
 ### Few-shot Event Extraction
 
