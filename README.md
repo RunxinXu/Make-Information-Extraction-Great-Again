@@ -723,10 +723,11 @@ The relation types usually include *coreference*, *causality*, *temporal*, *sub-
   - [Classifying Temporal Relations by Bidirectional LSTM over Dependency Paths](https://aclanthology.org/P17-2001/) (ACL2017): 引入dependency tree
   - [A Structured Learning Approach to Temporal Relation Extraction](https://aclanthology.org/D17-1108/) (EMNLP2017): 整数规划
   - [Context-Aware Neural Model for Temporal Information Extraction](https://aclanthology.org/P18-1049/) (ACL2018): memory
-  - [Joint Reasoning for Temporal and Causal Relations](https://aclanthology.org/P18-1212/) (ACL2018)
+  - [Joint Reasoning for Temporal and Causal Relations](https://aclanthology.org/P18-1212/) (ACL2018): 借助事件因果关系
   - [Improving Temporal Relation Extraction with a Globally Acquired Statistical Resource](https://aclanthology.org/N18-1077/) (NAACL2018)
   - [Temporal Information Extraction by Predicting Relative Time-lines](https://aclanthology.org/D18-1155/) (EMNLP2018): 从pair-wise角度转变成map到time-line
   - [Domain Knowledge Empowered Structured Neural Net for End-to-End Event Temporal Relation Extraction](https://aclanthology.org/2020.emnlp-main.461/) (EMNLP2020)
+  - [Joint Constrained Learning for Event-Event Relation Extraction](https://aclanthology.org/2020.emnlp-main.51/) (EMNLP2020): 借助事件间子事件关系
 #### Datasets?
 
 - TimeBank 1.2: [website](https://catalog.ldc.upenn.edu/LDC2006T08)
