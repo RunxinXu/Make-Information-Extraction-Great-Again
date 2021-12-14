@@ -44,15 +44,15 @@ For example, *Alpha* is an *Protein* type entity in the figure.
 - Sequence Labeling
   - [End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF](https://aclanthology.org/P16-1101/) (ACL2016)
   - [A Neural Layered Model for Nested Named Entity Recognition](https://aclanthology.org/N18-1131/) (NAACL2018): stack多层来从内到外识别实体
-  - [Sequence-to-Nuggets: Nested Entity Mention Detection via Anchor-Region Networks](https://aclanthology.org/P19-1511/) (ACL2019): 先找anchor word再向两边扩展
+  - [Pyramid: A Layered Model for Nested Named Entity Recognition](https://aclanthology.org/2020.acl-main.525/) (ACL2020): stack多层变成Pyramid
   - [TENER: Adapting Transformer Encoder for Named Entity Recognition](https://arxiv.org/abs/1911.04474) (arXiv): 改进position embedding
   - [Nested Named Entity Recognition with Partially-Observed TreeCRFs](https://www.aaai.org/AAAI21Papers/AAAI-6725.FuY.pdf) (AAAI2021): TreeCRF
 - Span-level
   - [A Local Detection Approach for Named Entity Recognition and Mention Detection](https://aclanthology.org/P17-1114/) (ACL2017)
   - [A Boundary-aware Neural Model for Nested Named Entity Recognition](https://aclanthology.org/D19-1034/) (EMNLP2019): 先判断哪些token可以作为entity的开头结尾，然后遍历判断所有potential spans
   - [Multi-Grained Named Entity Recognition](https://aclanthology.org/P19-1138/) (ACL2019): word-level+sentence-level特征先找possible spans再分类
+  - [Sequence-to-Nuggets: Nested Entity Mention Detection via Anchor-Region Networks](https://aclanthology.org/P19-1511/) (ACL2019): 先找anchor word再向两边扩展
   - [Named Entity Recognition as Dependency Parsing](https://aclanthology.org/2020.acl-main.577/) (ACL2020)
-  - [Pyramid: A Layered Model for Nested Named Entity Recognition](https://aclanthology.org/2020.acl-main.525/) (ACL2020): Pyramid
   - [Boundary Enhanced Neural Span Classification for Nested Named Entity Recognition](https://ojs.aaai.org/index.php/AAAI/article/view/6434) (AAAI2020): 同时分类boundary label和span label
   - [SpanNER: Named Entity Re-/Recognition as Span Prediction](https://aclanthology.org/2021.acl-long.558/) (ACL2021)
 - Hypergraph-based
