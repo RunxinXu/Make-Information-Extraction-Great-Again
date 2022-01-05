@@ -473,6 +473,7 @@ Given a document that consists of multiple sentences, the task aims at extractin
     - [Cross-Sentence N-ary Relation Extraction with Graph LSTMs](https://aclanthology.org/Q17-1008/) (EMNLP2017): dependency tree的边、相邻词的边、相邻句子root的边 + Graph LSTM
     - [Inter-sentence Relation Extraction with Document-level Graph Convolutional Neural Network](https://aclanthology.org/P19-1423/) (ACL2019): 每个句子基于dependency tree建图，之后还有相邻句子边、相邻词边、共指边和自环边
     - [Coarse-to-Fine Entity Representations for Document-level Relation Extraction](https://arxiv.org/abs/2012.02507) (arXiv): 基于dependency tree建图，同样有相邻句子、相邻词、共指、自环边 + 每个实体对在图上找各个mention之间路径再聚集起来预测
+    - [MrGCN: Mirror Graph Convolution Network for Relation Extraction with Long-Term Dependencies](https://openreview.net/forum?id=VB6gL-kUC7T) (ArXiv2021): 依存图 + Graph U-Net + Entity/Mention-centric classification
   - Non-word-level Graph (图的节点不是token而是mention/entity/sentence等)
     - [Connecting the Dots: Document-level Neural Relation Extraction with Edge-oriented Graphs](https://aclanthology.org/D19-1498/) (EMNLP2019): 图的节点包括mention、entity和sentence三种，启发式连边，之后与《[A Walk-based Model on Entity Graphs for Relation Extraction](https://aclanthology.org/P18-2014/)》类似基于其他边进行边信息聚合
     - [Reasoning with Latent Structure Refinement for Document-Level Relation Extraction](https://aclanthology.org/2020.acl-main.141/) (ACL2020): 先基于dependency tree抽出关键节点以及mention node、entity node来构图，之后不断refine这个graph
