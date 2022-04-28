@@ -771,6 +771,7 @@ As illustrated in the figure, the entities are recognized, with the relation tri
 
 - Sequence to Sequence
   - [Structured Prediction as Translation between Augmented Natural Languages](https://openreview.net/forum?id=US-TP-xnXI) (ICLR2021)
+  - [Unified Structure Generation for Universal Information Extraction](https://arxiv.org/abs/2203.12277) (ACL2022)
   
   
 #### Datasets?
